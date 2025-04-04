@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_Quan_ly_firsttryDataSet1" targetNamespace="http://tempuri.org/_Quan_ly_firsttryDataSet1.xsd" xmlns:mstns="http://tempuri.org/_Quan_ly_firsttryDataSet1.xsd" xmlns="http://tempuri.org/_Quan_ly_firsttryDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Quan_ly_firsttryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="Quan_ly_firsttryConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Second_Try.Properties.Settings.GlobalReference.Default.Quan_ly_firsttryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ThongTinNguoiDungplusTableAdapter" GeneratorDataComponentClassName="ThongTinNguoiDungplusTableAdapter" Name="ThongTinNguoiDungplus" UserDataComponentName="ThongTinNguoiDungplusTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="Quan_ly_firsttryConnectionString (Settings)" DbObjectName="[Quan_ly-firsttry].dbo.ThongTinNguoiDungplus" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Ho_ten FROM dbo.ThongTinNguoiDungplus</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Ho_ten" DataSetColumn="Ho_ten" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_Quan_ly_firsttryDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="_Quan_ly_firsttryDataSet1" msprop:Generator_DataSetName="_Quan_ly_firsttryDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ThongTinNguoiDungplus" msprop:Generator_RowEvHandlerName="ThongTinNguoiDungplusRowChangeEventHandler" msprop:Generator_RowDeletedName="ThongTinNguoiDungplusRowDeleted" msprop:Generator_RowDeletingName="ThongTinNguoiDungplusRowDeleting" msprop:Generator_RowEvArgName="ThongTinNguoiDungplusRowChangeEvent" msprop:Generator_TablePropName="ThongTinNguoiDungplus" msprop:Generator_RowChangedName="ThongTinNguoiDungplusRowChanged" msprop:Generator_RowChangingName="ThongTinNguoiDungplusRowChanging" msprop:Generator_TableClassName="ThongTinNguoiDungplusDataTable" msprop:Generator_RowClassName="ThongTinNguoiDungplusRow" msprop:Generator_TableVarName="tableThongTinNguoiDungplus" msprop:Generator_UserTableName="ThongTinNguoiDungplus">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ho_ten" msprop:Generator_ColumnPropNameInRow="Ho_ten" msprop:Generator_ColumnPropNameInTable="Ho_tenColumn" msprop:Generator_ColumnVarNameInTable="columnHo_ten" msprop:Generator_UserColumnName="Ho_ten" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
