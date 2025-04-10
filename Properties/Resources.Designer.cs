@@ -303,6 +303,16 @@ namespace Second_Try.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_chuye_khoa {
+            get {
+                object obj = ResourceManager.GetObject("icon chuye khoa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Icon_cuốn_lịch {
             get {
                 object obj = ResourceManager.GetObject("Icon cuốn lịch", resourceCulture);
@@ -356,16 +366,6 @@ namespace Second_Try.Properties {
         internal static System.Drawing.Bitmap icon_trừ {
             get {
                 object obj = ResourceManager.GetObject("icon trừ", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap lịch {
-            get {
-                object obj = ResourceManager.GetObject("lịch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,6 +546,26 @@ namespace Second_Try.Properties {
         internal static System.Drawing.Bitmap z6448960173815_79e84570f61f2623ad72be7657257d8b1 {
             get {
                 object obj = ResourceManager.GetObject("z6448960173815_79e84570f61f2623ad72be7657257d8b1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6471628827280_eb0dc962dff3f7635a61063dba256a98 {
+            get {
+                object obj = ResourceManager.GetObject("z6471628827280_eb0dc962dff3f7635a61063dba256a98", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap z6471628827280_eb0dc962dff3f7635a61063dba256a98_removebg_preview {
+            get {
+                object obj = ResourceManager.GetObject("z6471628827280_eb0dc962dff3f7635a61063dba256a98-removebg-preview", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

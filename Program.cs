@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Second_Try.DAL;
 
 namespace Second_Try
 {
@@ -16,29 +17,43 @@ namespace Second_Try
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            /**/ while (true)
-             {
-                 using (loginForm lg = new loginForm())
-                 {
-                     DialogResult result = lg.ShowDialog();
+            /**/
+            while (true)
+            {
+                using (loginForm lg = new loginForm())
+                {
+                    DialogResult result = lg.ShowDialog();
 
-                     if (result == DialogResult.OK)
-                     {
-                         using (mainForm mf = new mainForm())
-                         {
-                             if (mf.ShowDialog() == DialogResult.Cancel)
-                             {
-                                 continue; 
-                             }
-                         }
-                     }
-                     else if (result == DialogResult.Cancel)
-                     {
-                         break; 
-                     }
-                 }
-             }
-        //   Application.Run(new lichfrm());
+                    if (result == DialogResult.OK)
+                    {
+                        if (LoaiTaiKhoanHienTai.loataikhoan == "BenhNhan")
+                        {
+                            using (mainForm mf = new mainForm())
+                            {
+                                if (mf.ShowDialog() == DialogResult.Cancel)
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+                        else if (LoaiTaiKhoanHienTai.loataikhoan == "Admin")
+                        {
+                            using (mainForm2 mf = new mainForm2())
+                            {
+                                if (mf.ShowDialog() == DialogResult.Cancel)
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+                        break;
+                    }
+                }
+                //   Application.Run(new lichfrm());
+            }
         }
     }
 }
