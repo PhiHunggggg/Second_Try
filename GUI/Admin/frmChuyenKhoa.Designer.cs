@@ -30,22 +30,22 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.txtChuyenKhoa = new System.Windows.Forms.TextBox();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtchuyenkhoaid = new System.Windows.Forms.TextBox();
             this.quanLyLichKhamDataSet4 = new Second_Try.QuanLyLichKhamDataSet4();
             this.chuyenKhoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chuyenKhoaTableAdapter = new Second_Try.QuanLyLichKhamDataSet4TableAdapters.ChuyenKhoaTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.txtchuyenkhoaid = new System.Windows.Forms.TextBox();
-            this.txtChuyenKhoa = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyLichKhamDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chuyenKhoaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -58,6 +58,62 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1222, 331);
             this.panel1.TabIndex = 5;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.siticoneButton3);
+            this.panel2.Controls.Add(this.txtChuyenKhoa);
+            this.panel2.Controls.Add(this.siticoneButton1);
+            this.panel2.Controls.Add(this.siticoneButton2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Location = new System.Drawing.Point(346, 29);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(585, 229);
+            this.panel2.TabIndex = 15;
+            // 
+            // siticoneButton3
+            // 
+            this.siticoneButton3.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneButton3.BorderRadius = 19;
+            this.siticoneButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton3.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton3.Location = new System.Drawing.Point(229, 119);
+            this.siticoneButton3.Name = "siticoneButton3";
+            this.siticoneButton3.Size = new System.Drawing.Size(138, 43);
+            this.siticoneButton3.TabIndex = 12;
+            this.siticoneButton3.Text = "Sửa chuyên khoa";
+            this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
+            // 
+            // txtChuyenKhoa
+            // 
+            this.txtChuyenKhoa.Location = new System.Drawing.Point(204, 54);
+            this.txtChuyenKhoa.Name = "txtChuyenKhoa";
+            this.txtChuyenKhoa.Size = new System.Drawing.Size(236, 20);
+            this.txtChuyenKhoa.TabIndex = 14;
+            // 
+            // siticoneButton1
+            // 
+            this.siticoneButton1.BackColor = System.Drawing.Color.Transparent;
+            this.siticoneButton1.BorderRadius = 19;
+            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton1.Location = new System.Drawing.Point(31, 119);
+            this.siticoneButton1.Name = "siticoneButton1";
+            this.siticoneButton1.Size = new System.Drawing.Size(138, 43);
+            this.siticoneButton1.TabIndex = 8;
+            this.siticoneButton1.Text = "Thêm chuyên khoa";
+            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
             // 
             // siticoneButton2
             // 
@@ -77,23 +133,26 @@
             this.siticoneButton2.Text = "Xóa chuyên khoa";
             this.siticoneButton2.Click += new System.EventHandler(this.siticoneButton2_Click);
             // 
-            // siticoneButton1
+            // label1
             // 
-            this.siticoneButton1.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneButton1.BorderRadius = 19;
-            this.siticoneButton1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Location = new System.Drawing.Point(31, 119);
-            this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(138, 43);
-            this.siticoneButton1.TabIndex = 8;
-            this.siticoneButton1.Text = "Thêm chuyên khoa";
-            this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click);
+            this.label1.AutoSize = true;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label1.Font = new System.Drawing.Font("Coiny", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Blue;
+            this.label1.Location = new System.Drawing.Point(52, 55);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 19);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Chuyên khoa :";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // txtchuyenkhoaid
+            // 
+            this.txtchuyenkhoaid.Location = new System.Drawing.Point(1019, 55);
+            this.txtchuyenkhoaid.Name = "txtchuyenkhoaid";
+            this.txtchuyenkhoaid.Size = new System.Drawing.Size(100, 20);
+            this.txtchuyenkhoaid.TabIndex = 13;
+            this.txtchuyenkhoaid.Visible = false;
             // 
             // quanLyLichKhamDataSet4
             // 
@@ -126,65 +185,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.label1.Font = new System.Drawing.Font("Coiny", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(52, 55);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 19);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Chuyên khoa :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // siticoneButton3
-            // 
-            this.siticoneButton3.BackColor = System.Drawing.Color.Transparent;
-            this.siticoneButton3.BorderRadius = 19;
-            this.siticoneButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.siticoneButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneButton3.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton3.Location = new System.Drawing.Point(229, 119);
-            this.siticoneButton3.Name = "siticoneButton3";
-            this.siticoneButton3.Size = new System.Drawing.Size(138, 43);
-            this.siticoneButton3.TabIndex = 12;
-            this.siticoneButton3.Text = "Sửa chuyên khoa";
-            this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
-            // 
-            // txtchuyenkhoaid
-            // 
-            this.txtchuyenkhoaid.Location = new System.Drawing.Point(1019, 55);
-            this.txtchuyenkhoaid.Name = "txtchuyenkhoaid";
-            this.txtchuyenkhoaid.Size = new System.Drawing.Size(100, 20);
-            this.txtchuyenkhoaid.TabIndex = 13;
-            this.txtchuyenkhoaid.Visible = false;
-            // 
-            // txtChuyenKhoa
-            // 
-            this.txtChuyenKhoa.Location = new System.Drawing.Point(204, 54);
-            this.txtChuyenKhoa.Name = "txtChuyenKhoa";
-            this.txtChuyenKhoa.Size = new System.Drawing.Size(236, 20);
-            this.txtChuyenKhoa.TabIndex = 14;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.siticoneButton3);
-            this.panel2.Controls.Add(this.txtChuyenKhoa);
-            this.panel2.Controls.Add(this.siticoneButton1);
-            this.panel2.Controls.Add(this.siticoneButton2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(346, 29);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(585, 229);
-            this.panel2.TabIndex = 15;
-            // 
             // frmChuyenKhoa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,13 +195,14 @@
             this.Name = "frmChuyenKhoa";
             this.Text = "frmChuyenKhoa";
             this.Load += new System.EventHandler(this.frmChuyenKhoa_Load);
+            this.Resize += new System.EventHandler(this.frmChuyenKhoa_Resize);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyLichKhamDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chuyenKhoaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }

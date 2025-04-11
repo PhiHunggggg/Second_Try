@@ -142,6 +142,39 @@ namespace Second_Try.Control
             }
         }
         #endregion
+        public bool SuaLichLamViecPlus(int lichHenID,int bacSiID, DateTime ngay, TimeSpan gioBatDau, TimeSpan? gioKetThuc, bool trangThai, bool caLamViec)
+        {
+            try
+            {
+                string query = @"UPDATE LichLamViec 
+                         SET BacSiID=@BacSiID,Ngay = @NgayHen, GioBatDau = @GioBatDau, GioKetThuc = @GioKetThuc, TrangThai = @TrangThai, CaLamViec = @CaLamViec
+                         WHERE LichHenID = @LichHenID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@LichHenID", lichHenID);
+                    cmd.Parameters.AddWithValue("@BacSiID", bacSiID);
+                    cmd.Parameters.AddWithValue("@NgayHen", ngay);
+                    cmd.Parameters.AddWithValue("@GioBatDau", gioBatDau);
+                    cmd.Parameters.Add("@GioKetThuc", SqlDbType.Time).Value = gioKetThuc.HasValue ? (object)gioKetThuc.Value : DBNull.Value;
+                    cmd.Parameters.AddWithValue("@TrangThai", trangThai);
+                    cmd.Parameters.AddWithValue("@CaLamViec", caLamViec);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0; // Trả về true nếu cập nhật thành công
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật lịch làm việc: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
         #region XoaLichLamViec
         public bool XoaLichLamViec(int lichHenID)
         {

@@ -205,7 +205,7 @@ namespace Second_Try.View
             bool ngayHenThayDoi = lichHienTai.NgayHen.Date != ngayHen.Date;
             TimeSpan giohenhientai = lichHienTai.GioHen;
             bool calamviechientai;
-            if (giohenhientai >= new TimeSpan(7, 0, 0) || giohenhientai <= new TimeSpan(12, 0, 0))
+            if (giohenhientai >= new TimeSpan(7, 0, 0) && giohenhientai <= new TimeSpan(12, 0, 0))
             {
                 calamviechientai = true; // Ca sáng
             }

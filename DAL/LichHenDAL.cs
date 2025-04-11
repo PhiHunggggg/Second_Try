@@ -28,14 +28,14 @@ namespace Second_Try.Control
         private LichHenDAL() { }
 
         #region ThemLichHen
-        public int ThemLichHen(int benhNhanID, int bacSiID, DateTime ngayHen, TimeSpan gioHen,string ghiChu,string hotennguoikham,DateTime ngaySinh,string sdt,bool gioiTinh,string diachi)
+        public int ThemLichHen(int benhNhanID, int bacSiID, DateTime ngayHen, TimeSpan gioHen, string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
         {
             int lichHenID = -1;
             try
             {
                 string query = @"INSERT INTO LichHen (BenhNhanID, BacSiID, NgayHen, GioHen, TrangThai,GhiChu,HoTenNguoiKham,NgaySinh,SDT,GioiTinh,DiaChi) VALUES (@BenhNhanID, @BacSiID, @NgayHen, @GioHen, 0,@GhiChu,@HoTenNguoiKham,@NgaySinh,@SDT,@GioiTinh,@DiaChi);SELECT SCOPE_IDENTITY();";
-            
-        using (SqlCommand cmd = new SqlCommand(query, conn))
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@BenhNhanID", benhNhanID);
                     cmd.Parameters.AddWithValue("@BacSiID", bacSiID);
@@ -129,7 +129,7 @@ namespace Second_Try.Control
         }
         #endregion
         #region SuaLichHen
-        public bool SuaLichHen(int lichHenID,DateTime ngayHen, TimeSpan gioHen,
+        public bool SuaLichHen(int lichHenID, DateTime ngayHen, TimeSpan gioHen,
                          string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
         {
             try
@@ -223,6 +223,7 @@ namespace Second_Try.Control
             }
         }
         #endregion
+        #region LayLichHenTheoID
         public LichHen GetLichHenByID(int lichHenID)
         {
             LichHen lichHen = null;
@@ -269,6 +270,97 @@ namespace Second_Try.Control
 
             return lichHen;
         }
-    }
+        #endregion
+        #region GetLichHen
+        public List<LichHen> GetLichHen()
+        {
+            List<LichHen> danhSachLichHen = new List<LichHen>();
 
+            try
+            {
+                string query = @"SELECT LichHenID,BenhNhanID, BacSiID, NgayHen, GioHen,GioDenThucTe,TrangThai, GhiChu, HoTenNguoiKham ,NgaySinh,SDT,GioiTinh,DiaChi
+                         FROM LichHen";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            LichHen lichHen = new LichHen
+                            {
+                                LichHenID = reader.GetInt32(0),
+                                BenhNhanID = reader.GetInt32(1),
+                                BacSiID = reader.GetInt32(2),
+                                NgayHen = reader.GetDateTime(3),
+                                GioHen = reader.GetTimeSpan(4),
+                                GioDenThucTe = reader.IsDBNull(5) ? null : (TimeSpan?)reader.GetTimeSpan(5),
+                                TrangThai = reader.GetBoolean(6), // Nếu kiểu bit thì dùng GetBoolean
+                                GhiChu = reader.IsDBNull(7) ? "" : reader.GetString(7),
+                                HoTenNguoiKham = reader.GetString(8),
+                                NgaySinh = reader.GetDateTime(9),
+                                SDT = reader.GetString(10),
+                                GioiTinh = reader.GetBoolean(11),
+                                DiaChi = reader.GetString(12)
+                            };
+                            danhSachLichHen.Add(lichHen);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy lịch hẹn: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return danhSachLichHen;
+        }
+        #endregion
+        #region SuaLichHen
+        public bool SuaLichHen2(int lichHenID,int bacssiID ,DateTime ngayHen, TimeSpan gioHen, TimeSpan? gioDenThucTe, bool trangThai, string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
+        {
+            try
+            {
+                string query = @"UPDATE LichHen 
+                         SET BacSiID=@BacSiID ,NgayHen = @NgayHen, GioHen = @GioHen, GioDenThucTe = @GioDenThucTe, TrangThai = @TrangThai, GhiChu = @GhiChu,HoTenNguoiKham = @HoTenNguoiKham, NgaySinh = @NgaySinh, SDT = @SDT, GioiTinh = @GioiTinh, DiaChi = @DiaChi
+                         WHERE LichHenID = @LichHenID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BacSiID", bacssiID);
+                    cmd.Parameters.AddWithValue("@LichHenID", lichHenID);
+                    cmd.Parameters.AddWithValue("@NgayHen", ngayHen);
+                    cmd.Parameters.AddWithValue("@GioHen", gioHen);
+                    cmd.Parameters.AddWithValue("@GioDenThucTe", (object)gioDenThucTe ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@TrangThai", trangThai);
+                    cmd.Parameters.AddWithValue("@GhiChu", ghiChu);
+                    cmd.Parameters.AddWithValue("@HoTenNguoiKham", hotennguoikham);
+                    cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
+                    cmd.Parameters.AddWithValue("@SDT", sdt);
+                    cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
+                    cmd.Parameters.AddWithValue("@DiaChi", diachi);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    int result = cmd.ExecuteNonQuery();
+                    return result > 0; // Trả về true nếu cập nhật thành công
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi cập nhật lịch hẹn1: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+        #endregion
+
+    }
 }

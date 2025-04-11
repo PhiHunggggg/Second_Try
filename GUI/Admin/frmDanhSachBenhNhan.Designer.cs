@@ -41,25 +41,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
+            this.txtDiachi = new System.Windows.Forms.TextBox();
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.txttaikhoanid = new System.Windows.Forms.TextBox();
             this.txtid = new System.Windows.Forms.TextBox();
             this.ckbNu = new System.Windows.Forms.CheckBox();
             this.ckbNam = new System.Windows.Forms.CheckBox();
             this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.txtDiachi = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
-            this.txtSDT = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.chuyenKhoaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyLichKhamDataSet4)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // chuyenKhoaTableAdapter
@@ -185,6 +185,34 @@
             this.panel1.Size = new System.Drawing.Size(1009, 259);
             this.panel1.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel2.Controls.Add(this.siticoneButton2);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Controls.Add(this.txtSDT);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.txtHoTen);
+            this.panel2.Controls.Add(this.txtMatKhau);
+            this.panel2.Controls.Add(this.txtDiachi);
+            this.panel2.Controls.Add(this.txtTenDangNhap);
+            this.panel2.Controls.Add(this.siticoneButton1);
+            this.panel2.Controls.Add(this.txttaikhoanid);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.txtid);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.ckbNu);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.ckbNam);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.dtpNgaySinh);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.siticoneButton3);
+            this.panel2.Location = new System.Drawing.Point(23, 25);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(981, 224);
+            this.panel2.TabIndex = 31;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -193,6 +221,13 @@
             this.label4.Size = new System.Drawing.Size(58, 13);
             this.label4.TabIndex = 30;
             this.label4.Text = "Mật khẩu :";
+            // 
+            // txtSDT
+            // 
+            this.txtSDT.Location = new System.Drawing.Point(560, 23);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(223, 20);
+            this.txtSDT.TabIndex = 4;
             // 
             // label3
             // 
@@ -203,12 +238,26 @@
             this.label3.TabIndex = 29;
             this.label3.Text = "Tên đăng nhập :";
             // 
+            // txtHoTen
+            // 
+            this.txtHoTen.Location = new System.Drawing.Point(108, 23);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(223, 20);
+            this.txtHoTen.TabIndex = 0;
+            // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(560, 127);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(223, 20);
             this.txtMatKhau.TabIndex = 28;
+            // 
+            // txtDiachi
+            // 
+            this.txtDiachi.Location = new System.Drawing.Point(108, 109);
+            this.txtDiachi.Name = "txtDiachi";
+            this.txtDiachi.Size = new System.Drawing.Size(223, 20);
+            this.txtDiachi.TabIndex = 6;
             // 
             // txtTenDangNhap
             // 
@@ -264,27 +313,6 @@
             this.dtpNgaySinh.Size = new System.Drawing.Size(223, 20);
             this.dtpNgaySinh.TabIndex = 22;
             // 
-            // txtDiachi
-            // 
-            this.txtDiachi.Location = new System.Drawing.Point(108, 109);
-            this.txtDiachi.Name = "txtDiachi";
-            this.txtDiachi.Size = new System.Drawing.Size(223, 20);
-            this.txtDiachi.TabIndex = 6;
-            // 
-            // txtHoTen
-            // 
-            this.txtHoTen.Location = new System.Drawing.Point(108, 23);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(223, 20);
-            this.txtHoTen.TabIndex = 0;
-            // 
-            // txtSDT
-            // 
-            this.txtSDT.Location = new System.Drawing.Point(560, 23);
-            this.txtSDT.Name = "txtSDT";
-            this.txtSDT.Size = new System.Drawing.Size(223, 20);
-            this.txtSDT.TabIndex = 4;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -302,34 +330,6 @@
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
-            // panel2
-            // 
-            this.panel2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel2.Controls.Add(this.siticoneButton2);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.txtSDT);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.txtHoTen);
-            this.panel2.Controls.Add(this.txtMatKhau);
-            this.panel2.Controls.Add(this.txtDiachi);
-            this.panel2.Controls.Add(this.txtTenDangNhap);
-            this.panel2.Controls.Add(this.siticoneButton1);
-            this.panel2.Controls.Add(this.txttaikhoanid);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.txtid);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.ckbNu);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.ckbNam);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.dtpNgaySinh);
-            this.panel2.Controls.Add(this.label7);
-            this.panel2.Controls.Add(this.siticoneButton3);
-            this.panel2.Location = new System.Drawing.Point(23, 25);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(981, 224);
-            this.panel2.TabIndex = 31;
-            // 
             // frmDanhSachBenhNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -340,12 +340,13 @@
             this.Name = "frmDanhSachBenhNhan";
             this.Text = "Form3";
             this.Load += new System.EventHandler(this.frmDanhSachBenhNhan_Load);
+            this.Resize += new System.EventHandler(this.frmDanhSachBenhNhan_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.chuyenKhoaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanLyLichKhamDataSet4)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

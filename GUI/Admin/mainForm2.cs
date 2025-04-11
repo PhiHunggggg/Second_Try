@@ -579,7 +579,7 @@ namespace Second_Try
 
         private void siticoneButton2_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new frmChuyenKhoa());
+            OpenChildForm(new frmLich());
         }
 
         private void siticoneButton1_Click_1(object sender, EventArgs e)

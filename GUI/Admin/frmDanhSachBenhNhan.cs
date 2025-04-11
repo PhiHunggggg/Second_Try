@@ -159,5 +159,13 @@ namespace Second_Try.GUI
                 MessageBox.Show("Xóa thất bại");
             }
         }
+
+        private void frmDanhSachBenhNhan_Resize(object sender, EventArgs e)
+        {
+            if (this.Width > 1300)
+                dataGridView1.Height = 450;
+            else
+                dataGridView1.Height = 200;
+        }
     }
 }

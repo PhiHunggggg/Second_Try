@@ -133,5 +133,13 @@ namespace Second_Try.GUI.Admin
                 }
             }
         }
+
+        private void frmChuyenKhoa_Resize(object sender, EventArgs e)
+        {
+            if (this.Width > 1300)
+                dataGridView1.Height = 450;
+            else
+                dataGridView1.Height = 200;
+        }
     }
 }

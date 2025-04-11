@@ -238,5 +238,13 @@ namespace Second_Try.GUI
                 MessageBox.Show("Xóa tài khoản thất bại");
             }
         }
+
+        private void frmDanhSachBacSy_Resize(object sender, EventArgs e)
+        {
+            if (this.Width > 1300)
+                dataGridView1.Height = 450;
+            else
+                dataGridView1.Height = 200;
+        }
     }
 }

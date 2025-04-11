@@ -58,7 +58,16 @@ namespace Second_Try.Entity
         private string ghiChu;
         public string GhiChu { get => ghiChu; set => ghiChu = value; }
         private string hotennguoikham;
-        
+        public string trangThaiString
+        {
+            get
+            {
+                if (TrangThai == true)
+                    return "Đã khám";
+                else
+                    return "Chưa khám";
+            }
+        }
 
 
 
