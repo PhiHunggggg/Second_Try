@@ -40,7 +40,7 @@ namespace Second_Try.GUI.Admin
             List<LichHen> danhSachLichHen = LichHenDAL.Instance.GetLichHen();
             foreach (var lichHen in danhSachLichHen)
             {
-                BacSi bacSi = TaiKhoanDAL.Instance.GetBacSiByID(lichHen.BacSiID);
+                Second_Try.Entity.BacSi bacSi = TaiKhoanDAL.Instance.GetBacSiByID(lichHen.BacSiID);
                 if (bacSi != null)
                 {
                     lichHen.BacSiHoTen = bacSi.HoTen;

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Second_Try.Control;
 using Second_Try.Entity;
+using Second_Try.GUI.BenhNhan;
 using Second_Try.View;
 using Siticone.Desktop.UI.WinForms;
 
@@ -518,7 +519,7 @@ namespace Second_Try
         }
         private void siticoneButton2_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new lichfrm());
+            OpenChildForm(new frmLichplus());
         }
 
         private void siticoneButton1_Click_1(object sender, EventArgs e)

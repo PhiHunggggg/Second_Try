@@ -73,9 +73,7 @@
             this.t4s = new System.Windows.Forms.Button();
             this.lbl1 = new System.Windows.Forms.Label();
             this.t5s = new System.Windows.Forms.Button();
-            this.label19 = new System.Windows.Forms.Label();
             this.t5c = new System.Windows.Forms.Button();
-            this.label20 = new System.Windows.Forms.Label();
             this.t6s = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.t6c = new System.Windows.Forms.Button();
@@ -127,6 +125,8 @@
             this.bacSiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bacSiTableAdapter1 = new Second_Try.QuanLyLichKhamDataSet1TableAdapters.BacSiTableAdapter();
             this.chuyenKhoaTableAdapter = new Second_Try.QuanLyLichKhamDataSet2TableAdapters.ChuyenKhoaTableAdapter();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.lichKhamBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quan_ly_secondtryDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.quanlysecondtryDataSetBindingSource)).BeginInit();
@@ -200,7 +200,7 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1090, 648);
             this.panel1.TabIndex = 0;
@@ -213,7 +213,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1090, 648);
             this.panel2.TabIndex = 25;
@@ -247,7 +247,7 @@
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Location = new System.Drawing.Point(37, 62);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(472, 507);
             this.panel3.TabIndex = 31;
@@ -273,7 +273,7 @@
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
             this.siticoneButton1.Location = new System.Drawing.Point(278, 447);
-            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton1.Name = "siticoneButton1";
             this.siticoneButton1.Size = new System.Drawing.Size(135, 37);
             this.siticoneButton1.TabIndex = 23;
@@ -286,7 +286,7 @@
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dateTimePicker1.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.dateTimePicker1.Location = new System.Drawing.Point(148, 301);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowUpDown = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(151, 20);
@@ -317,7 +317,7 @@
             // 
             this.Nu.AutoSize = true;
             this.Nu.Location = new System.Drawing.Point(278, 161);
-            this.Nu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Nu.Margin = new System.Windows.Forms.Padding(2);
             this.Nu.Name = "Nu";
             this.Nu.Size = new System.Drawing.Size(40, 17);
             this.Nu.TabIndex = 18;
@@ -329,7 +329,7 @@
             // 
             this.Nam.AutoSize = true;
             this.Nam.Location = new System.Drawing.Point(155, 161);
-            this.Nam.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Nam.Margin = new System.Windows.Forms.Padding(2);
             this.Nam.Name = "Nam";
             this.Nam.Size = new System.Drawing.Size(48, 17);
             this.Nam.TabIndex = 17;
@@ -347,7 +347,7 @@
             this.btnDatlich.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDatlich.ForeColor = System.Drawing.Color.White;
             this.btnDatlich.Location = new System.Drawing.Point(90, 447);
-            this.btnDatlich.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDatlich.Margin = new System.Windows.Forms.Padding(2);
             this.btnDatlich.Name = "btnDatlich";
             this.btnDatlich.Size = new System.Drawing.Size(135, 37);
             this.btnDatlich.TabIndex = 16;
@@ -357,7 +357,7 @@
             // txtghichu
             // 
             this.txtghichu.Location = new System.Drawing.Point(144, 336);
-            this.txtghichu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtghichu.Margin = new System.Windows.Forms.Padding(2);
             this.txtghichu.Multiline = true;
             this.txtghichu.Name = "txtghichu";
             this.txtghichu.Size = new System.Drawing.Size(240, 96);
@@ -406,7 +406,7 @@
             // txtDiachi
             // 
             this.txtDiachi.Location = new System.Drawing.Point(155, 219);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(200, 20);
             this.txtDiachi.TabIndex = 10;
@@ -414,7 +414,7 @@
             // txtSdt
             // 
             this.txtSdt.Location = new System.Drawing.Point(155, 188);
-            this.txtSdt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSdt.Margin = new System.Windows.Forms.Padding(2);
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(200, 20);
             this.txtSdt.TabIndex = 8;
@@ -422,7 +422,7 @@
             // txtNgaySinh
             // 
             this.txtNgaySinh.Location = new System.Drawing.Point(155, 124);
-            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNgaySinh.Margin = new System.Windows.Forms.Padding(2);
             this.txtNgaySinh.Name = "txtNgaySinh";
             this.txtNgaySinh.Size = new System.Drawing.Size(200, 20);
             this.txtNgaySinh.TabIndex = 7;
@@ -430,7 +430,7 @@
             // txtTenBenhNhan
             // 
             this.txtTenBenhNhan.Location = new System.Drawing.Point(155, 96);
-            this.txtTenBenhNhan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenBenhNhan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenBenhNhan.Name = "txtTenBenhNhan";
             this.txtTenBenhNhan.Size = new System.Drawing.Size(200, 20);
             this.txtTenBenhNhan.TabIndex = 6;
@@ -523,7 +523,7 @@
             this.panel5.Controls.Add(this.label24);
             this.panel5.Controls.Add(this.label25);
             this.panel5.Location = new System.Drawing.Point(584, 182);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(467, 247);
             this.panel5.TabIndex = 37;
@@ -534,7 +534,7 @@
             this.t4c.BackColor = System.Drawing.Color.Lime;
             this.t4c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t4c.Location = new System.Drawing.Point(212, 119);
-            this.t4c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t4c.Margin = new System.Windows.Forms.Padding(2);
             this.t4c.Name = "t4c";
             this.t4c.Size = new System.Drawing.Size(75, 71);
             this.t4c.TabIndex = 5;
@@ -546,7 +546,7 @@
             this.T2s.BackColor = System.Drawing.Color.Lime;
             this.T2s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.T2s.Location = new System.Drawing.Point(62, 46);
-            this.T2s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.T2s.Margin = new System.Windows.Forms.Padding(2);
             this.T2s.Name = "T2s";
             this.T2s.Size = new System.Drawing.Size(75, 73);
             this.T2s.TabIndex = 0;
@@ -567,7 +567,7 @@
             this.t2c.BackColor = System.Drawing.Color.Lime;
             this.t2c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t2c.Location = new System.Drawing.Point(62, 119);
-            this.t2c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t2c.Margin = new System.Windows.Forms.Padding(2);
             this.t2c.Name = "t2c";
             this.t2c.Size = new System.Drawing.Size(75, 71);
             this.t2c.TabIndex = 1;
@@ -588,7 +588,7 @@
             this.t3c.BackColor = System.Drawing.Color.Lime;
             this.t3c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t3c.Location = new System.Drawing.Point(137, 119);
-            this.t3c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t3c.Margin = new System.Windows.Forms.Padding(2);
             this.t3c.Name = "t3c";
             this.t3c.Size = new System.Drawing.Size(75, 71);
             this.t3c.TabIndex = 2;
@@ -609,7 +609,7 @@
             this.t3s.BackColor = System.Drawing.Color.Lime;
             this.t3s.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.t3s.Location = new System.Drawing.Point(137, 46);
-            this.t3s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t3s.Margin = new System.Windows.Forms.Padding(2);
             this.t3s.Name = "t3s";
             this.t3s.Size = new System.Drawing.Size(75, 73);
             this.t3s.TabIndex = 3;
@@ -630,7 +630,7 @@
             this.t4s.BackColor = System.Drawing.Color.Lime;
             this.t4s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t4s.Location = new System.Drawing.Point(212, 46);
-            this.t4s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t4s.Margin = new System.Windows.Forms.Padding(2);
             this.t4s.Name = "t4s";
             this.t4s.Size = new System.Drawing.Size(75, 73);
             this.t4s.TabIndex = 4;
@@ -651,51 +651,31 @@
             this.t5s.BackColor = System.Drawing.Color.Lime;
             this.t5s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t5s.Location = new System.Drawing.Point(287, 46);
-            this.t5s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t5s.Margin = new System.Windows.Forms.Padding(2);
             this.t5s.Name = "t5s";
             this.t5s.Size = new System.Drawing.Size(75, 73);
             this.t5s.TabIndex = 6;
             this.t5s.UseVisualStyleBackColor = false;
             this.t5s.Click += new System.EventHandler(this.t5s_Click);
             // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(17, 155);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(34, 13);
-            this.label19.TabIndex = 19;
-            this.label19.Text = "Chiều";
-            // 
             // t5c
             // 
             this.t5c.BackColor = System.Drawing.Color.Lime;
             this.t5c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t5c.Location = new System.Drawing.Point(287, 119);
-            this.t5c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t5c.Margin = new System.Windows.Forms.Padding(2);
             this.t5c.Name = "t5c";
             this.t5c.Size = new System.Drawing.Size(75, 71);
             this.t5c.TabIndex = 7;
             this.t5c.UseVisualStyleBackColor = false;
             this.t5c.Click += new System.EventHandler(this.t5c_Click);
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 76);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(32, 13);
-            this.label20.TabIndex = 18;
-            this.label20.Text = "Sáng";
-            // 
             // t6s
             // 
             this.t6s.BackColor = System.Drawing.Color.Lime;
             this.t6s.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t6s.Location = new System.Drawing.Point(362, 46);
-            this.t6s.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t6s.Margin = new System.Windows.Forms.Padding(2);
             this.t6s.Name = "t6s";
             this.t6s.Size = new System.Drawing.Size(75, 73);
             this.t6s.TabIndex = 8;
@@ -717,7 +697,7 @@
             this.t6c.BackColor = System.Drawing.Color.Lime;
             this.t6c.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.t6c.Location = new System.Drawing.Point(362, 119);
-            this.t6c.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.t6c.Margin = new System.Windows.Forms.Padding(2);
             this.t6c.Name = "t6c";
             this.t6c.Size = new System.Drawing.Size(75, 71);
             this.t6c.TabIndex = 9;
@@ -776,7 +756,7 @@
             this.panel4.Controls.Add(this.listBoxBacsy);
             this.panel4.Controls.Add(this.comboBox1);
             this.panel4.Location = new System.Drawing.Point(83, 100);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(396, 386);
             this.panel4.TabIndex = 36;
@@ -794,7 +774,7 @@
             // dpk
             // 
             this.dpk.Location = new System.Drawing.Point(138, 228);
-            this.dpk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dpk.Margin = new System.Windows.Forms.Padding(2);
             this.dpk.Name = "dpk";
             this.dpk.Size = new System.Drawing.Size(151, 20);
             this.dpk.TabIndex = 26;
@@ -814,7 +794,7 @@
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(128, 314);
-            this.button13.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button13.Margin = new System.Windows.Forms.Padding(2);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(146, 59);
             this.button13.TabIndex = 27;
@@ -836,7 +816,7 @@
             // 
             this.listBoxBacsy.FormattingEnabled = true;
             this.listBoxBacsy.Location = new System.Drawing.Point(138, 116);
-            this.listBoxBacsy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.listBoxBacsy.Margin = new System.Windows.Forms.Padding(2);
             this.listBoxBacsy.Name = "listBoxBacsy";
             this.listBoxBacsy.Size = new System.Drawing.Size(216, 82);
             this.listBoxBacsy.TabIndex = 29;
@@ -849,7 +829,7 @@
             this.comboBox1.DisplayMember = "TenChuyenKhoa";
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(138, 38);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(233, 21);
             this.comboBox1.TabIndex = 32;
@@ -1002,7 +982,7 @@
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Location = new System.Drawing.Point(950, 369);
-            this.button12.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button12.Margin = new System.Windows.Forms.Padding(2);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(75, 73);
             this.button12.TabIndex = 11;
@@ -1015,7 +995,7 @@
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Location = new System.Drawing.Point(950, 299);
-            this.button11.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button11.Margin = new System.Windows.Forms.Padding(2);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 73);
             this.button11.TabIndex = 10;
@@ -1028,7 +1008,7 @@
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Location = new System.Drawing.Point(874, 369);
-            this.button10.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button10.Margin = new System.Windows.Forms.Padding(2);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(75, 73);
             this.button10.TabIndex = 9;
@@ -1041,7 +1021,7 @@
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Location = new System.Drawing.Point(874, 299);
-            this.button9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button9.Margin = new System.Windows.Forms.Padding(2);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(75, 73);
             this.button9.TabIndex = 8;
@@ -1054,7 +1034,7 @@
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(800, 369);
-            this.button8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button8.Margin = new System.Windows.Forms.Padding(2);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 73);
             this.button8.TabIndex = 7;
@@ -1067,7 +1047,7 @@
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(800, 299);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 73);
             this.button7.TabIndex = 6;
@@ -1080,7 +1060,7 @@
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(724, 369);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 73);
             this.button6.TabIndex = 5;
@@ -1093,7 +1073,7 @@
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(724, 299);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 73);
             this.button5.TabIndex = 4;
@@ -1105,7 +1085,7 @@
             this.button4.BackColor = System.Drawing.Color.Lime;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Location = new System.Drawing.Point(650, 299);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(75, 73);
             this.button4.TabIndex = 3;
@@ -1118,7 +1098,7 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(650, 369);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 73);
             this.button3.TabIndex = 2;
@@ -1131,7 +1111,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(574, 369);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 73);
             this.button2.TabIndex = 1;
@@ -1144,7 +1124,7 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(574, 299);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 73);
             this.button1.TabIndex = 0;
@@ -1193,6 +1173,26 @@
             // 
             this.chuyenKhoaTableAdapter.ClearBeforeFill = true;
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(17, 76);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(32, 13);
+            this.label20.TabIndex = 18;
+            this.label20.Text = "Sáng";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(17, 155);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(34, 13);
+            this.label19.TabIndex = 19;
+            this.label19.Text = "Chiều";
+            // 
             // lichfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1200,7 +1200,7 @@
             this.ClientSize = new System.Drawing.Size(1090, 648);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "lichfrm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.lichfrm_Load);
@@ -1264,8 +1264,6 @@
         private System.Windows.Forms.Label lbl4;
         private System.Windows.Forms.Label lbl3;
         private System.Windows.Forms.Label lbl1;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -1327,5 +1325,7 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

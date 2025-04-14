@@ -1,6 +1,6 @@
 ﻿namespace Second_Try
 {
-    partial class mainForm
+    partial class mainForm3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mainForm));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.siticoneButton5 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton7 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton9 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton6 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
+            this.btnmini = new System.Windows.Forms.PictureBox();
+            this.btnmaxi = new System.Windows.Forms.PictureBox();
+            this.btnX = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlcheck = new System.Windows.Forms.Panel();
             this.lblHaa = new System.Windows.Forms.Label();
             this.panelMini = new System.Windows.Forms.Panel();
+            this.btnMenumini = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlMax = new System.Windows.Forms.Panel();
             this.btnBacsy = new Siticone.Desktop.UI.WinForms.SiticoneButton();
@@ -45,31 +54,21 @@
             this.siticoneButton3 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton2 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
             this.siticoneButton1 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnMenumini = new Siticone.Desktop.UI.WinForms.SiticoneImageButton();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.siticoneButton5 = new Siticone.Desktop.UI.WinForms.SiticoneButton();
-            this.btnmini = new System.Windows.Forms.PictureBox();
-            this.btnmaxi = new System.Windows.Forms.PictureBox();
-            this.btnX = new System.Windows.Forms.PictureBox();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnmini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnmaxi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnX)).BeginInit();
             this.panel2.SuspendLayout();
             this.panelMini.SuspendLayout();
-            this.pnlMax.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmini)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaxi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnX)).BeginInit();
+            this.pnlMax.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,11 +85,35 @@
             this.panel3.Controls.Add(this.panel2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1528, 105);
+            this.panel3.Size = new System.Drawing.Size(1146, 85);
             this.panel3.TabIndex = 1;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             this.panel3.MouseEnter += new System.EventHandler(this.panel3_MouseEnter);
+            // 
+            // siticoneButton5
+            // 
+            this.siticoneButton5.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.siticoneButton5.BorderRadius = 6;
+            this.siticoneButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.siticoneButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.siticoneButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.siticoneButton5.FillColor = System.Drawing.Color.DarkBlue;
+            this.siticoneButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.siticoneButton5.ForeColor = System.Drawing.Color.White;
+            this.siticoneButton5.Image = global::Second_Try.Properties.Resources.ảnh_hình_tròn;
+            this.siticoneButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.siticoneButton5.ImageSize = new System.Drawing.Size(30, 30);
+            this.siticoneButton5.Location = new System.Drawing.Point(990, 41);
+            this.siticoneButton5.Margin = new System.Windows.Forms.Padding(2);
+            this.siticoneButton5.Name = "siticoneButton5";
+            this.siticoneButton5.Size = new System.Drawing.Size(156, 44);
+            this.siticoneButton5.TabIndex = 2;
+            this.siticoneButton5.Text = "Nguyễn Phi Hùng";
+            this.siticoneButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.siticoneButton5.Click += new System.EventHandler(this.siticoneButton5_Click);
             // 
             // siticoneButton7
             // 
@@ -105,9 +128,10 @@
             this.siticoneButton7.ForeColor = System.Drawing.Color.Black;
             this.siticoneButton7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.siticoneButton7.ImageSize = new System.Drawing.Size(30, 30);
-            this.siticoneButton7.Location = new System.Drawing.Point(672, 48);
+            this.siticoneButton7.Location = new System.Drawing.Point(504, 39);
+            this.siticoneButton7.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton7.Name = "siticoneButton7";
-            this.siticoneButton7.Size = new System.Drawing.Size(208, 54);
+            this.siticoneButton7.Size = new System.Drawing.Size(156, 44);
             this.siticoneButton7.TabIndex = 5;
             this.siticoneButton7.Text = "Setting";
             this.siticoneButton7.Click += new System.EventHandler(this.siticoneButton7_Click);
@@ -125,9 +149,10 @@
             this.siticoneButton9.ForeColor = System.Drawing.Color.Black;
             this.siticoneButton9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.siticoneButton9.ImageSize = new System.Drawing.Size(30, 30);
-            this.siticoneButton9.Location = new System.Drawing.Point(880, 48);
+            this.siticoneButton9.Location = new System.Drawing.Point(660, 39);
+            this.siticoneButton9.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton9.Name = "siticoneButton9";
-            this.siticoneButton9.Size = new System.Drawing.Size(208, 54);
+            this.siticoneButton9.Size = new System.Drawing.Size(156, 44);
             this.siticoneButton9.TabIndex = 7;
             this.siticoneButton9.Text = "Information";
             this.siticoneButton9.Click += new System.EventHandler(this.siticoneButton9_Click);
@@ -145,12 +170,58 @@
             this.siticoneButton6.ForeColor = System.Drawing.Color.Black;
             this.siticoneButton6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.siticoneButton6.ImageSize = new System.Drawing.Size(30, 30);
-            this.siticoneButton6.Location = new System.Drawing.Point(1088, 48);
+            this.siticoneButton6.Location = new System.Drawing.Point(816, 39);
+            this.siticoneButton6.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton6.Name = "siticoneButton6";
-            this.siticoneButton6.Size = new System.Drawing.Size(208, 54);
+            this.siticoneButton6.Size = new System.Drawing.Size(156, 44);
             this.siticoneButton6.TabIndex = 4;
             this.siticoneButton6.Text = "Home";
             this.siticoneButton6.Click += new System.EventHandler(this.siticoneButton6_Click);
+            // 
+            // btnmini
+            // 
+            this.btnmini.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnmini.Image = global::Second_Try.Properties.Resources.icon_trừ;
+            this.btnmini.Location = new System.Drawing.Point(1076, 0);
+            this.btnmini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmini.Name = "btnmini";
+            this.btnmini.Size = new System.Drawing.Size(23, 25);
+            this.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnmini.TabIndex = 3;
+            this.btnmini.TabStop = false;
+            this.btnmini.Click += new System.EventHandler(this.btnmini_Click);
+            this.btnmini.MouseEnter += new System.EventHandler(this.btnmini_MouseEnter);
+            this.btnmini.MouseLeave += new System.EventHandler(this.btnmini_MouseLeave);
+            // 
+            // btnmaxi
+            // 
+            this.btnmaxi.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnmaxi.Image = global::Second_Try.Properties.Resources.icon_maxi;
+            this.btnmaxi.Location = new System.Drawing.Point(1100, 0);
+            this.btnmaxi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnmaxi.Name = "btnmaxi";
+            this.btnmaxi.Size = new System.Drawing.Size(23, 25);
+            this.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnmaxi.TabIndex = 2;
+            this.btnmaxi.TabStop = false;
+            this.btnmaxi.Click += new System.EventHandler(this.btnmaxi_Click);
+            this.btnmaxi.MouseEnter += new System.EventHandler(this.btnmaxi_MouseEnter);
+            this.btnmaxi.MouseLeave += new System.EventHandler(this.btnmaxi_MouseLeave);
+            // 
+            // btnX
+            // 
+            this.btnX.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnX.Image = global::Second_Try.Properties.Resources.window_close_line_icon_235523;
+            this.btnX.Location = new System.Drawing.Point(1123, 0);
+            this.btnX.Margin = new System.Windows.Forms.Padding(2);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(23, 25);
+            this.btnX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnX.TabIndex = 1;
+            this.btnX.TabStop = false;
+            this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            this.btnX.MouseEnter += new System.EventHandler(this.pictureBox7_MouseEnter);
+            this.btnX.MouseLeave += new System.EventHandler(this.btnX_MouseLeave);
             // 
             // panel2
             // 
@@ -159,16 +230,18 @@
             this.panel2.Controls.Add(this.pnlcheck);
             this.panel2.Controls.Add(this.lblHaa);
             this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(666, 105);
+            this.panel2.Size = new System.Drawing.Size(500, 85);
             this.panel2.TabIndex = 0;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // pnlcheck
             // 
-            this.pnlcheck.Location = new System.Drawing.Point(260, 104);
+            this.pnlcheck.Location = new System.Drawing.Point(195, 84);
+            this.pnlcheck.Margin = new System.Windows.Forms.Padding(2);
             this.pnlcheck.Name = "pnlcheck";
-            this.pnlcheck.Size = new System.Drawing.Size(1268, 644);
+            this.pnlcheck.Size = new System.Drawing.Size(951, 523);
             this.pnlcheck.TabIndex = 0;
             this.pnlcheck.Visible = false;
             this.pnlcheck.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlcheck_Paint);
@@ -181,9 +254,10 @@
             this.lblHaa.AutoSize = true;
             this.lblHaa.Font = new System.Drawing.Font("Cooper Black", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHaa.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lblHaa.Location = new System.Drawing.Point(348, 31);
+            this.lblHaa.Location = new System.Drawing.Point(261, 25);
+            this.lblHaa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHaa.Name = "lblHaa";
-            this.lblHaa.Size = new System.Drawing.Size(170, 46);
+            this.lblHaa.Size = new System.Drawing.Size(135, 36);
             this.lblHaa.TabIndex = 8;
             this.lblHaa.Text = "JT APP";
             // 
@@ -199,19 +273,104 @@
             this.panelMini.Controls.Add(this.pictureBox4);
             this.panelMini.Controls.Add(this.pictureBox5);
             this.panelMini.Location = new System.Drawing.Point(0, 0);
+            this.panelMini.Margin = new System.Windows.Forms.Padding(2);
             this.panelMini.Name = "panelMini";
-            this.panelMini.Size = new System.Drawing.Size(77, 748);
+            this.panelMini.Size = new System.Drawing.Size(58, 608);
             this.panelMini.TabIndex = 0;
             this.panelMini.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMini_Paint);
             this.panelMini.MouseEnter += new System.EventHandler(this.panelMini_MouseEnter);
+            // 
+            // btnMenumini
+            // 
+            this.btnMenumini.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMenumini.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMenumini.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMenumini.Image = global::Second_Try.Properties.Resources.icon_nút_menu;
+            this.btnMenumini.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnMenumini.ImageRotate = 0F;
+            this.btnMenumini.Location = new System.Drawing.Point(0, 551);
+            this.btnMenumini.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenumini.Name = "btnMenumini";
+            this.btnMenumini.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnMenumini.Size = new System.Drawing.Size(58, 57);
+            this.btnMenumini.TabIndex = 8;
+            this.btnMenumini.Click += new System.EventHandler(this.siticoneImageButton1_Click);
+            this.btnMenumini.MouseEnter += new System.EventHandler(this.btnMenumini_MouseEnter);
+            this.btnMenumini.MouseLeave += new System.EventHandler(this.btnMenumini_MouseLeave);
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.CadetBlue;
+            this.pictureBox8.Image = global::Second_Try.Properties.Resources.z6471628827280_eb0dc962dff3f7635a61063dba256a98_removebg_preview;
+            this.pictureBox8.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(58, 85);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBox6.Image = global::Second_Try.Properties.Resources.icon_chuye_khoa;
+            this.pictureBox6.Location = new System.Drawing.Point(0, 314);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 5;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBox3.Image = global::Second_Try.Properties.Resources.Icon_bác_sỹ;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 82);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 2;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBox4.Image = global::Second_Try.Properties.Resources.Icon_cuốn_lịch;
+            this.pictureBox4.Location = new System.Drawing.Point(0, 236);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.pictureBox5.Image = global::Second_Try.Properties.Resources.icon_bệnh_nhân;
+            this.pictureBox5.Location = new System.Drawing.Point(0, 159);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(58, 77);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox5.TabIndex = 4;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
             // 
             // panel1
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.Enabled = false;
-            this.panel1.Location = new System.Drawing.Point(75, 101);
+            this.panel1.Location = new System.Drawing.Point(56, 82);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1453, 644);
+            this.panel1.Size = new System.Drawing.Size(1090, 523);
             this.panel1.TabIndex = 0;
             this.panel1.Visible = false;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
@@ -230,8 +389,9 @@
             this.pnlMax.Controls.Add(this.siticoneButton2);
             this.pnlMax.Controls.Add(this.siticoneButton1);
             this.pnlMax.Location = new System.Drawing.Point(0, 0);
+            this.pnlMax.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMax.Name = "pnlMax";
-            this.pnlMax.Size = new System.Drawing.Size(264, 748);
+            this.pnlMax.Size = new System.Drawing.Size(198, 608);
             this.pnlMax.TabIndex = 0;
             this.pnlMax.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMax_Paint);
             // 
@@ -248,9 +408,10 @@
             this.btnBacsy.Image = global::Second_Try.Properties.Resources.Icon_bác_sỹ;
             this.btnBacsy.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBacsy.ImageSize = new System.Drawing.Size(60, 60);
-            this.btnBacsy.Location = new System.Drawing.Point(0, 105);
+            this.btnBacsy.Location = new System.Drawing.Point(0, 85);
+            this.btnBacsy.Margin = new System.Windows.Forms.Padding(2);
             this.btnBacsy.Name = "btnBacsy";
-            this.btnBacsy.Size = new System.Drawing.Size(264, 95);
+            this.btnBacsy.Size = new System.Drawing.Size(198, 77);
             this.btnBacsy.TabIndex = 1;
             this.btnBacsy.Text = "Danh sách bác sỹ";
             this.btnBacsy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -264,9 +425,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.CadetBlue;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox2.Image = global::Second_Try.Properties.Resources.z6471628827280_eb0dc962dff3f7635a61063dba256a98_removebg_preview;
-            this.pictureBox2.Location = new System.Drawing.Point(0, -4);
+            this.pictureBox2.Location = new System.Drawing.Point(0, -3);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(264, 109);
+            this.pictureBox2.Size = new System.Drawing.Size(198, 89);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
@@ -285,9 +447,10 @@
             this.siticoneButton4.Image = global::Second_Try.Properties.Resources.icon_nút_menu;
             this.siticoneButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton4.ImageSize = new System.Drawing.Size(60, 60);
-            this.siticoneButton4.Location = new System.Drawing.Point(0, 680);
+            this.siticoneButton4.Location = new System.Drawing.Point(0, 553);
+            this.siticoneButton4.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton4.Name = "siticoneButton4";
-            this.siticoneButton4.Size = new System.Drawing.Size(264, 68);
+            this.siticoneButton4.Size = new System.Drawing.Size(198, 55);
             this.siticoneButton4.TabIndex = 5;
             this.siticoneButton4.Text = "Menu";
             this.siticoneButton4.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -309,11 +472,12 @@
             this.siticoneButton3.Image = global::Second_Try.Properties.Resources.icon_bệnh_nhân;
             this.siticoneButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton3.ImageSize = new System.Drawing.Size(60, 60);
-            this.siticoneButton3.Location = new System.Drawing.Point(0, 200);
+            this.siticoneButton3.Location = new System.Drawing.Point(0, 162);
+            this.siticoneButton3.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton3.Name = "siticoneButton3";
-            this.siticoneButton3.Size = new System.Drawing.Size(264, 95);
+            this.siticoneButton3.Size = new System.Drawing.Size(198, 77);
             this.siticoneButton3.TabIndex = 4;
-            this.siticoneButton3.Text = "Thông tin bệnh nhân";
+            this.siticoneButton3.Text = "Danh sách bệnh nhân";
             this.siticoneButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton3.TextFormatNoPrefix = true;
             this.siticoneButton3.Click += new System.EventHandler(this.siticoneButton3_Click);
@@ -333,11 +497,12 @@
             this.siticoneButton2.Image = global::Second_Try.Properties.Resources.Icon_cuốn_lịch;
             this.siticoneButton2.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton2.ImageSize = new System.Drawing.Size(60, 60);
-            this.siticoneButton2.Location = new System.Drawing.Point(0, 295);
+            this.siticoneButton2.Location = new System.Drawing.Point(0, 240);
+            this.siticoneButton2.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton2.Name = "siticoneButton2";
-            this.siticoneButton2.Size = new System.Drawing.Size(264, 95);
+            this.siticoneButton2.Size = new System.Drawing.Size(198, 77);
             this.siticoneButton2.TabIndex = 3;
-            this.siticoneButton2.Text = "Lịch hẹn";
+            this.siticoneButton2.Text = "Lịch ca khám";
             this.siticoneButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton2.TextFormatNoPrefix = true;
             this.siticoneButton2.Click += new System.EventHandler(this.siticoneButton2_Click_1);
@@ -354,160 +519,20 @@
             this.siticoneButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.siticoneButton1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.siticoneButton1.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton1.Image = global::Second_Try.Properties.Resources.Icon_cuốn_lịch1;
+            this.siticoneButton1.Image = global::Second_Try.Properties.Resources.icon_chuye_khoa;
             this.siticoneButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton1.ImageSize = new System.Drawing.Size(60, 60);
-            this.siticoneButton1.Location = new System.Drawing.Point(0, 390);
+            this.siticoneButton1.Location = new System.Drawing.Point(0, 317);
+            this.siticoneButton1.Margin = new System.Windows.Forms.Padding(2);
             this.siticoneButton1.Name = "siticoneButton1";
-            this.siticoneButton1.Size = new System.Drawing.Size(264, 95);
+            this.siticoneButton1.Size = new System.Drawing.Size(198, 77);
             this.siticoneButton1.TabIndex = 2;
-            this.siticoneButton1.Text = "Danh sách lịch";
+            this.siticoneButton1.Text = "Chuyên khoa";
             this.siticoneButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.siticoneButton1.TextFormatNoPrefix = true;
             this.siticoneButton1.Click += new System.EventHandler(this.siticoneButton1_Click_1);
             this.siticoneButton1.MouseEnter += new System.EventHandler(this.siticoneButton1_MouseEnter_1);
             this.siticoneButton1.MouseLeave += new System.EventHandler(this.siticoneButton1_MouseLeave);
-            // 
-            // btnMenumini
-            // 
-            this.btnMenumini.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMenumini.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnMenumini.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMenumini.Image = global::Second_Try.Properties.Resources.icon_nút_menu;
-            this.btnMenumini.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnMenumini.ImageRotate = 0F;
-            this.btnMenumini.Location = new System.Drawing.Point(0, 678);
-            this.btnMenumini.Name = "btnMenumini";
-            this.btnMenumini.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnMenumini.Size = new System.Drawing.Size(77, 70);
-            this.btnMenumini.TabIndex = 8;
-            this.btnMenumini.Click += new System.EventHandler(this.siticoneImageButton1_Click);
-            this.btnMenumini.MouseEnter += new System.EventHandler(this.btnMenumini_MouseEnter);
-            this.btnMenumini.MouseLeave += new System.EventHandler(this.btnMenumini_MouseLeave);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.CadetBlue;
-            this.pictureBox8.Image = global::Second_Try.Properties.Resources.z6471628827280_eb0dc962dff3f7635a61063dba256a98_removebg_preview;
-            this.pictureBox8.Location = new System.Drawing.Point(0, -3);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(77, 105);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pictureBox6.Image = global::Second_Try.Properties.Resources.Icon_cuốn_lịch1;
-            this.pictureBox6.Location = new System.Drawing.Point(0, 386);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(77, 95);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 5;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pictureBox3.Image = global::Second_Try.Properties.Resources.Icon_bác_sỹ;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 101);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(77, 95);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            this.pictureBox3.MouseEnter += new System.EventHandler(this.pictureBox3_MouseEnter);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pictureBox4.Image = global::Second_Try.Properties.Resources.Icon_cuốn_lịch;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 291);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(77, 95);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.MouseEnter += new System.EventHandler(this.pictureBox4_MouseEnter);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.pictureBox5.Image = global::Second_Try.Properties.Resources.icon_bệnh_nhân;
-            this.pictureBox5.Location = new System.Drawing.Point(0, 196);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(77, 95);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 4;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.MouseEnter += new System.EventHandler(this.pictureBox5_MouseEnter);
-            // 
-            // siticoneButton5
-            // 
-            this.siticoneButton5.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.siticoneButton5.BorderRadius = 6;
-            this.siticoneButton5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.siticoneButton5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.siticoneButton5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.siticoneButton5.FillColor = System.Drawing.Color.DarkBlue;
-            this.siticoneButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.siticoneButton5.ForeColor = System.Drawing.Color.White;
-            this.siticoneButton5.Image = global::Second_Try.Properties.Resources.ảnh_hình_tròn;
-            this.siticoneButton5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.siticoneButton5.ImageSize = new System.Drawing.Size(30, 30);
-            this.siticoneButton5.Location = new System.Drawing.Point(1320, 51);
-            this.siticoneButton5.Name = "siticoneButton5";
-            this.siticoneButton5.Size = new System.Drawing.Size(208, 54);
-            this.siticoneButton5.TabIndex = 2;
-            this.siticoneButton5.Text = "Nguyễn Phi Hùng";
-            this.siticoneButton5.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.siticoneButton5.Click += new System.EventHandler(this.siticoneButton5_Click);
-            // 
-            // btnmini
-            // 
-            this.btnmini.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnmini.Image = global::Second_Try.Properties.Resources.icon_trừ;
-            this.btnmini.Location = new System.Drawing.Point(1435, 0);
-            this.btnmini.Name = "btnmini";
-            this.btnmini.Size = new System.Drawing.Size(31, 31);
-            this.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnmini.TabIndex = 3;
-            this.btnmini.TabStop = false;
-            this.btnmini.Click += new System.EventHandler(this.btnmini_Click);
-            this.btnmini.MouseEnter += new System.EventHandler(this.btnmini_MouseEnter);
-            this.btnmini.MouseLeave += new System.EventHandler(this.btnmini_MouseLeave);
-            // 
-            // btnmaxi
-            // 
-            this.btnmaxi.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnmaxi.Image = global::Second_Try.Properties.Resources.icon_maxi;
-            this.btnmaxi.Location = new System.Drawing.Point(1466, 0);
-            this.btnmaxi.Name = "btnmaxi";
-            this.btnmaxi.Size = new System.Drawing.Size(31, 31);
-            this.btnmaxi.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnmaxi.TabIndex = 2;
-            this.btnmaxi.TabStop = false;
-            this.btnmaxi.Click += new System.EventHandler(this.btnmaxi_Click);
-            this.btnmaxi.MouseEnter += new System.EventHandler(this.btnmaxi_MouseEnter);
-            this.btnmaxi.MouseLeave += new System.EventHandler(this.btnmaxi_MouseLeave);
-            // 
-            // btnX
-            // 
-            this.btnX.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnX.Image = global::Second_Try.Properties.Resources.window_close_line_icon_235523;
-            this.btnX.Location = new System.Drawing.Point(1497, 0);
-            this.btnX.Name = "btnX";
-            this.btnX.Size = new System.Drawing.Size(31, 31);
-            this.btnX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnX.TabIndex = 1;
-            this.btnX.TabStop = false;
-            this.btnX.Click += new System.EventHandler(this.btnX_Click);
-            this.btnX.MouseEnter += new System.EventHandler(this.pictureBox7_MouseEnter);
-            this.btnX.MouseLeave += new System.EventHandler(this.btnX_MouseLeave);
             // 
             // pnlMain
             // 
@@ -518,9 +543,10 @@
             this.pnlMain.BackgroundImage = global::Second_Try.Properties.Resources.Ảnh_hành_tinh_2_promax;
             this.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pnlMain.Controls.Add(this.checkBox1);
-            this.pnlMain.Location = new System.Drawing.Point(75, 101);
+            this.pnlMain.Location = new System.Drawing.Point(56, 82);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1453, 647);
+            this.pnlMain.Size = new System.Drawing.Size(1090, 526);
             this.pnlMain.TabIndex = 3;
             this.pnlMain.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlMain_Paint);
             this.pnlMain.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
@@ -529,45 +555,47 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.checkBox1.Location = new System.Drawing.Point(381, 79);
+            this.checkBox1.Location = new System.Drawing.Point(551, 105);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(89, 20);
+            this.checkBox1.Size = new System.Drawing.Size(75, 17);
             this.checkBox1.TabIndex = 0;
             this.checkBox1.Text = "Chế độ tối";
             this.checkBox1.UseVisualStyleBackColor = false;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // mainForm
+            // mainForm3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1528, 748);
+            this.ClientSize = new System.Drawing.Size(1146, 608);
             this.Controls.Add(this.pnlMax);
             this.Controls.Add(this.panelMini);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlMain);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "mainForm";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "mainForm3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.mainForm_Load);
             this.MouseEnter += new System.EventHandler(this.mainForm_MouseEnter);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnmini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnmaxi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnX)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panelMini.ResumeLayout(false);
-            this.pnlMax.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmini)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnmaxi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnX)).EndInit();
+            this.pnlMax.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlMain.ResumeLayout(false);
             this.pnlMain.PerformLayout();
             this.ResumeLayout(false);

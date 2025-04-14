@@ -87,6 +87,14 @@ namespace Second_Try
                 if (loaiTaiKhoan == "BacSi")
                 {
                     LoaiTaiKhoanHienTai.loataikhoan = "BacSi";
+                    try
+                    {
+                        IdTaiKhoan.idBacSiTaiKhoan = TaiKhoanDAL.Instance.GetBacSiID(username, password);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi lấy ID bệnh nhân: " + ex.Message);
+                    }
                 }
                 else if (loaiTaiKhoan == "BenhNhan")
                 {

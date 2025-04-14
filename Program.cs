@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Second_Try.DAL;
+using Second_Try.GUI.BenhNhan;
 
 namespace Second_Try
 {
@@ -46,14 +47,30 @@ namespace Second_Try
                                 }
                             }
                         }
+                        else if (LoaiTaiKhoanHienTai.loataikhoan == "BacSi")
+                        {
+                            using (mainForm3 mf = new mainForm3())
+                            {
+                                if (mf.ShowDialog() == DialogResult.Cancel)
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Tài khoản không hợp lệ.");
+                            continue;
+                        }
                     }
                     else if (result == DialogResult.Cancel)
                     {
                         break;
                     }
                 }
-                //   Application.Run(new lichfrm());
+                  
             }
+              //  Application.Run(new frmLichplus());
         }
     }
 }

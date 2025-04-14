@@ -9,6 +9,7 @@ namespace Second_Try.Control
     public static class IdTaiKhoan
     {
         public static int idBenhNhanTaiKhoan = -1;
+        public static int idBacSiTaiKhoan = -1;
     }
     public static class IdTaiKhoanHienTai
     {

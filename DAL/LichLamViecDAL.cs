@@ -69,6 +69,50 @@ namespace Second_Try.Control
 
             return trangThaiRanh;
         }
+        public bool CheckCaTrung(int bacSiID, DateTime ngayCheck, TimeSpan gioCheck)
+        {
+            bool isOverlap=false;
+
+            try
+            {
+                string query = @"
+            SELECT COUNT(*) 
+            FROM LichLamViec 
+            WHERE BacSiID = @BacSiID 
+                  AND Ngay = @NgayCheck 
+                  AND GioBatDau = @GioCheck
+                  AND TrangThai = 0";  // TrangThai = 0 có nghĩa là bác sĩ bận (false)
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BacSiID", bacSiID);
+                    cmd.Parameters.AddWithValue("@NgayCheck", ngayCheck);
+                    cmd.Parameters.AddWithValue("@GioCheck", gioCheck);
+
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open(); // Mở kết nối trước khi thực thi truy vấn
+
+                    object result = cmd.ExecuteScalar(); // Lấy kết quả trả về từ SQL
+
+                    if (result != null && int.TryParse(result.ToString(), out int count))
+                    {
+                        isOverlap = (count > 0); // Nếu count > 0 thì có ca trùng
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi kiểm tra trùng ca: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close(); // Đóng kết nối SQL
+            }
+
+            return isOverlap;  // Trả về true nếu có ca trùng, false nếu không
+        }
+
         #endregion
         #region ThemLichLamViec
         public bool ThemLichLamViec(int bacSiID, DateTime ngay, TimeSpan gioBatDau, TimeSpan gioKetThuc, bool trangThai, bool caLamViec, int lichHenID)

@@ -501,6 +501,38 @@ namespace Second_Try.Control
 
             return benhNhanID;
         }
+        public int GetBacSiID(string username, string password)
+        {
+            int bacSiID = -1; // Trả về -1 nếu không tìm thấy
+            try
+            {
+                string query = @"SELECT BacSiID 
+                         FROM TaiKhoan 
+                         WHERE TenDangNhap = @Username AND MatKhau = @Password";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password); // 🔴 Nếu cần mã hóa mật khẩu, sửa chỗ này!
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    var result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        bacSiID = Convert.ToInt32(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đăng nhập bác sĩ: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return bacSiID;
+        }
         public TaiKhoan GetTaiKhoanByID(int taiKhoanID)
         {
             TaiKhoan taiKhoan = null; // Nếu không tìm thấy, sẽ trả về null

@@ -35,7 +35,7 @@ namespace Second_Try.GUI
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
 
 
-            List<BacSi> danhsachbacsy = BacSiDAL.Instance.GetDanhSachBacSyFull();
+            List<Second_Try.Entity.BacSi> danhsachbacsy = BacSiDAL.Instance.GetDanhSachBacSyFull();
             foreach (var bacSy in danhsachbacsy)
             {
                 ChuyenKhoa ck = ChuyenKhoaDAL.Instance.GetChuyenKhoaByID(bacSy.ChuyenKhoaID);

@@ -34,7 +34,7 @@ namespace Second_Try.GUI
             dataGridView1.CellFormatting += dataGridView1_CellFormatting;
 
 
-            List<BenhNhan> danhsachbenhnhan = BenhNhanDAL.Instance.GetDanhSachBenhNhanFull();
+            List<Second_Try.Entity.BenhNhan> danhsachbenhnhan = BenhNhanDAL.Instance.GetDanhSachBenhNhanFull();
 
 
 
