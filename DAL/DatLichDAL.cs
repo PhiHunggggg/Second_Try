@@ -11,7 +11,7 @@ using Second_Try.Entity;
 
 namespace Second_Try.DAL
 {
-    internal class DatLichDAL:DataProvider
+    internal class DatLichDAL : DataProvider
     {
         private static DatLichDAL instance;
         public static DatLichDAL Instance
@@ -24,7 +24,7 @@ namespace Second_Try.DAL
             }
         }
         private DatLichDAL() { }
-
+        #region cban
         //Thêm lịch
         public bool ThemDatLich(int bacSiID, int benhNhanID, string hoTen, bool gioiTinh, string sdt, string diaChi, string ghiChu, DateTime ngayHen, TimeSpan gioDangki)
         {
@@ -73,7 +73,7 @@ namespace Second_Try.DAL
             return lichHenID > 0; // Nếu ID hợp lệ thì trả về true
         }
         //Lấy danh sách lịch hẹn theo bác sỹ
-        public List<DatLich> GetLichHenByBacSiID(int bacSiID,DateTime ngayHen,TimeSpan gioDangKi)
+        public List<DatLich> GetLichHenByBacSiID(int bacSiID, DateTime ngayHen, TimeSpan gioDangKi)
         {
             List<DatLich> danhSachLichHen = new List<DatLich>();
             try
@@ -103,7 +103,52 @@ namespace Second_Try.DAL
                             GioDangki = reader.GetTimeSpan(9),
                             ThoiGian = reader.GetDateTime(10),
                             KhanCap = reader.IsDBNull(11) ? false : reader.GetBoolean(11),
-                            TrangThai = reader.IsDBNull(12) ? false : reader.GetBoolean(12)
+                            TrangThai = reader.IsDBNull(12) ? (bool?)null : reader.GetBoolean(12)
+                        };
+                        danhSachLichHen.Add(lichHen);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy danh sách lịch hẹn: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return danhSachLichHen;
+        }
+        public List<DatLich> GetLichHenByBenhNhanID(int benhNhanID)
+        {
+            List<DatLich> danhSachLichHen = new List<DatLich>();
+            try
+            {
+                string query = "SELECT * FROM DatLich WHERE BenhNhanID = @BenhNhanID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BenhNhanID", benhNhanID);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        DatLich lichHen = new DatLich
+                        {
+                            DatLichID = reader.GetInt32(0),
+                            BacSiID = reader.GetInt32(1),
+                            BenhNhanID = reader.GetInt32(2),
+                            HoTen = reader.GetString(3),
+                            GioiTinh = reader.GetBoolean(4),
+                            Sdt = reader.GetString(5),
+                            DiaChi = reader.GetString(6),
+                            GhiChu = reader.GetString(7),
+                            NgayHen = reader.GetDateTime(8),
+                            GioDangki = reader.GetTimeSpan(9),
+                            ThoiGian = reader.GetDateTime(10),
+                            KhanCap = reader.IsDBNull(11) ? false : reader.GetBoolean(11),
+                            TrangThai = reader.IsDBNull(12) ? (bool?)null : reader.GetBoolean(12)
                         };
                         danhSachLichHen.Add(lichHen);
                     }
@@ -132,7 +177,7 @@ namespace Second_Try.DAL
                  WHERE BacSiID = @BacSiID 
                  AND CAST(NgayHen AS DATE) = @NgayCheck 
                 AND GioDangKi = @GioDangKi
-                 AND (TrangThai = 0 OR TrangThai IS NULL)";
+                ";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -162,6 +207,80 @@ namespace Second_Try.DAL
             }
 
             return isOverlap;  // Trả về true nếu có ca trùng, false nếu không
+        }
+        #endregion
+        #region xacnhan
+        public bool XacNhanLichHenMini(int datLichID)
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                string getQuery = "SELECT * FROM DatLich WHERE DatLichID = @DatLichID";
+                DatLich lich = null;
+                using (SqlCommand cmd = new SqlCommand(getQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            lich = new DatLich
+                            {
+                                DatLichID = reader.GetInt32(0),
+                                BacSiID = reader.GetInt32(1),
+                                BenhNhanID = reader.GetInt32(2),
+                                HoTen = reader.GetString(3),
+                                GioiTinh = reader.GetBoolean(4),
+                                Sdt = reader.GetString(5),
+                                DiaChi = reader.GetString(6),
+                                GhiChu = reader.GetString(7),
+                                NgayHen = reader.GetDateTime(8),
+                                GioDangki = reader.GetTimeSpan(9)
+                            };
+                        }
+                    }
+                }
+                if (lich == null)
+                {
+                    MessageBox.Show("Không tìm thấy lịch hẹn!");
+                    return false;
+                }
+                // 2. Cập nhật trạng thái lịch trong DatLich
+                string updateQuery = "UPDATE DatLich SET TrangThai = 1 WHERE DatLichID = @DatLichID";
+                using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    cmd.ExecuteNonQuery();
+                }
+                string tuChoiQuery = @"
+                UPDATE DatLich
+               SET TrangThai = 0
+               WHERE BacSiID = @BacSiID
+               AND NgayHen = @NgayHen
+               AND GioDangKi = @GioDangki
+               AND DatLichID != @DatLichID
+               AND TrangThai IS NULL";
+                using (SqlCommand cmd = new SqlCommand(tuChoiQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BacSiID", lich.BacSiID);
+                    cmd.Parameters.AddWithValue("@NgayHen", lich.NgayHen.Date);
+                    cmd.Parameters.AddWithValue("@GioDangki", lich.GioDangki);
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi xác nhận lịch: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
         }
         public bool XacNhanLichHen(int datLichID)
         {
@@ -202,20 +321,11 @@ namespace Second_Try.DAL
                     MessageBox.Show("Không tìm thấy lịch hẹn!");
                     return false;
                 }
-
-                // 2. Cập nhật trạng thái lịch trong DatLich
-                string updateQuery = "UPDATE DatLich SET TrangThai = 1 WHERE DatLichID = @DatLichID";
-                using (SqlCommand cmd = new SqlCommand(updateQuery, conn))
-                {
-                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
-                    cmd.ExecuteNonQuery();
-                }
-
                 // 3. Thêm vào LichHen và lấy lại LichHenID
                 string insertLichHen = @"
-            INSERT INTO LichHen (BacSiID, BenhNhanID, NgayHen, GioHen, GhiChu, HoTenNguoiKham, SDT, GioiTinh, DatLichID)
+            INSERT INTO LichHen (BacSiID, BenhNhanID, NgayHen, GioHen, GhiChu, HoTenNguoiKham, SDT, GioiTinh,DiaChi, DatLichID)
             OUTPUT INSERTED.LichHenID
-            VALUES (@BacSiID, @BenhNhanID, @NgayHen, @GioHen, @GhiChu, @HoTenNguoiKham, @SoDienThoai, @GioiTinh, @DatLichID)";
+            VALUES (@BacSiID, @BenhNhanID, @NgayHen, @GioHen, @GhiChu, @HoTenNguoiKham, @SoDienThoai, @GioiTinh,@DiaChi, @DatLichID)";
 
                 int lichHenID = -1;
                 using (SqlCommand cmd = new SqlCommand(insertLichHen, conn))
@@ -228,6 +338,7 @@ namespace Second_Try.DAL
                     cmd.Parameters.AddWithValue("@HoTenNguoiKham", lich.HoTen);
                     cmd.Parameters.AddWithValue("@SoDienThoai", lich.Sdt);
                     cmd.Parameters.AddWithValue("@GioiTinh", lich.GioiTinh);
+                    cmd.Parameters.AddWithValue("@DiaChi", lich.DiaChi);
                     cmd.Parameters.AddWithValue("@DatLichID", lich.DatLichID);
 
                     lichHenID = (int)cmd.ExecuteScalar();
@@ -242,7 +353,7 @@ namespace Second_Try.DAL
                 {
                     cmd.Parameters.AddWithValue("@BacSiID", lich.BacSiID);
                     cmd.Parameters.AddWithValue("@NgayHen", lich.NgayHen.Date);
-                    cmd.Parameters.AddWithValue("@GioHen", lich.GioDangki);                    
+                    cmd.Parameters.AddWithValue("@GioHen", lich.GioDangki);
                     int count = (int)cmd.ExecuteScalar();
 
                     if (count == 0 && lichHenID > 0)
@@ -275,6 +386,169 @@ namespace Second_Try.DAL
                     conn.Close();
             }
         }
+        public int DemSoLichDaXacNhan(int bacsiID, DateTime ngayHen, TimeSpan gioDangki)
+        {
+            int count = 0;
 
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+                string query = "SELECT COUNT(*) FROM DatLich WHERE  BacSiID = @BacSiID AND NgayHen=@NgayHen AND GioDangKi=@GioDangKi AND TrangThai = 1 ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BacSiID", bacsiID);
+                    cmd.Parameters.Add("@NgayHen", SqlDbType.Date).Value = ngayHen.Date;
+                    cmd.Parameters.AddWithValue("@GioDangKi", gioDangki);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && int.TryParse(result.ToString(), out int value))
+                    {
+                        count = value;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi đếm số lịch đã xác nhận: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+
+            return count;
+        }
+        #endregion
+        #region huy
+        public bool HuyLichHen(int datLichID)
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+
+                // 1. Lấy LichHenID từ DatLichID
+                int lichHenID = -1;
+                string getLichHenIDQuery = "SELECT LichHenID FROM LichHen WHERE DatLichID = @DatLichID";
+                using (SqlCommand cmd = new SqlCommand(getLichHenIDQuery, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        lichHenID = Convert.ToInt32(result);
+                    }
+                }
+
+                // 2. Xóa bản ghi trong LichLamViec nếu có
+                if (lichHenID != -1)
+                {
+                    string deleteLichLamViec = "DELETE FROM LichLamViec WHERE LichHenID = @LichHenID";
+                    using (SqlCommand cmd = new SqlCommand(deleteLichLamViec, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@LichHenID", lichHenID);
+                        cmd.ExecuteNonQuery();
+                    }
+
+                    // 3. Xóa bản ghi trong LichHen
+                    string deleteLichHen = "DELETE FROM LichHen WHERE LichHenID = @LichHenID";
+                    using (SqlCommand cmd = new SqlCommand(deleteLichHen, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@LichHenID", lichHenID);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+
+                // 4. Cập nhật trạng thái về "đang chờ" trong DatLich
+                string updateDatLich = "UPDATE DatLich SET TrangThai = 0 WHERE DatLichID = @DatLichID";
+                using (SqlCommand cmd = new SqlCommand(updateDatLich, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    cmd.ExecuteNonQuery();
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi hủy lịch hẹn: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+        }
+        public bool XoaDatLich(int datLichID)
+        {
+            try
+            {
+                if (conn.State == ConnectionState.Closed)
+                    conn.Open();
+                string query = "DELETE DatLich WHERE DatLichID = @DatLichID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@DatLichID", datLichID);
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi hủy lịch hẹn: " + ex.Message);
+                return false;
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+
+        }
+        #endregion
+        public bool CheckDaDatLich(int benhNhanID, DateTime ngayCheck)
+        {
+            bool isOverlap = false;
+
+            try
+            {
+                string query = @"
+        SELECT COUNT(*) 
+        FROM DatLich 
+        WHERE BenhNhanID = @BenhNhanID 
+        AND CAST(NgayHen AS DATE) = @NgayCheck 
+           ";
+
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BenhNhanID", benhNhanID);
+                    cmd.Parameters.Add("@NgayCheck", SqlDbType.Date).Value = ngayCheck.Date;
+
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open(); // Mở kết nối trước khi thực thi truy vấn
+                    object result = cmd.ExecuteScalar(); // Lấy kết quả trả về từ SQL
+
+                    if (result != null && int.TryParse(result.ToString(), out int count))
+                    {
+                        isOverlap = (count > 0); // Nếu count > 0 thì có ca trùng
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi khi kiểm tra trùng ca: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close(); // Đóng kết nối SQL
+            }
+
+            return isOverlap;  // Trả về true nếu có ca trùng, false nếu không
+        }
     }
 }

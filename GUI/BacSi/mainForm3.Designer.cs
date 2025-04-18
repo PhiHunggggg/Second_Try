@@ -413,7 +413,7 @@
             this.btnBacsy.Name = "btnBacsy";
             this.btnBacsy.Size = new System.Drawing.Size(198, 77);
             this.btnBacsy.TabIndex = 1;
-            this.btnBacsy.Text = "Danh sách bác sỹ";
+            this.btnBacsy.Text = "Lịch làm việc";
             this.btnBacsy.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnBacsy.TextFormatNoPrefix = true;
             this.btnBacsy.Click += new System.EventHandler(this.btnBacsy_Click);

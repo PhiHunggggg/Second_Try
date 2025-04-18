@@ -101,8 +101,8 @@
             this.siticoneComboBox2 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneComboBox1 = new Siticone.Desktop.UI.WinForms.SiticoneComboBox();
             this.siticoneShapes1 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
-            this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
             this.siticoneShapes2 = new Siticone.Desktop.UI.WinForms.SiticoneShapes();
+            this.siticoneAnimateWindow1 = new Siticone.Desktop.UI.WinForms.SiticoneAnimateWindow(this.components);
             this.panel1.SuspendLayout();
             this.pnlDatLich.SuspendLayout();
             this.pnlBtn.SuspendLayout();
@@ -158,7 +158,7 @@
             this.pnlDatLich.Controls.Add(this.label16);
             this.pnlDatLich.Controls.Add(this.label15);
             this.pnlDatLich.Controls.Add(this.label8);
-            this.pnlDatLich.Location = new System.Drawing.Point(13, 13);
+            this.pnlDatLich.Location = new System.Drawing.Point(12, 3);
             this.pnlDatLich.Name = "pnlDatLich";
             this.pnlDatLich.Size = new System.Drawing.Size(1118, 676);
             this.pnlDatLich.TabIndex = 47;

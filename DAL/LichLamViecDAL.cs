@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
+using Second_Try.Entity;
 
 namespace Second_Try.Control
 {
@@ -71,7 +72,7 @@ namespace Second_Try.Control
         }
         public bool CheckCaTrung(int bacSiID, DateTime ngayCheck, TimeSpan gioCheck)
         {
-            bool isOverlap=false;
+            bool isOverlap = false;
 
             try
             {
@@ -186,7 +187,7 @@ namespace Second_Try.Control
             }
         }
         #endregion
-        public bool SuaLichLamViecPlus(int lichHenID,int bacSiID, DateTime ngay, TimeSpan gioBatDau, TimeSpan? gioKetThuc, bool trangThai, bool caLamViec)
+        public bool SuaLichLamViecPlus(int lichHenID, int bacSiID, DateTime ngay, TimeSpan gioBatDau, TimeSpan? gioKetThuc, bool trangThai, bool caLamViec)
         {
             try
             {
@@ -250,5 +251,44 @@ namespace Second_Try.Control
         }
 
         #endregion
+        public List<LichLamViec> GetLichLamViecALL(int bacSiID)
+        {
+            List<LichLamViec> lichLamViecs = new List<LichLamViec>();
+            try
+            {
+                string query = "SELECT * FROM LichLamViec WHERE BacSiID = @BacSiID";
+                using (SqlCommand cmd = new SqlCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@BacSiID", bacSiID);
+                    if (conn.State == ConnectionState.Closed)
+                        conn.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        LichLamViec lichLamViec = new LichLamViec
+                        {
+                            LichID = reader.GetInt32(0),
+                            BacSiID = reader.GetInt32(1),
+                            Ngay = reader.GetDateTime(2),
+                            GioBatDau = reader.GetDateTime(3),
+                            GioKetThuc = reader.GetDateTime(4),
+                            TrangThai = reader.GetString(5)
+                        };
+                        lichLamViecs.Add(lichLamViec);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi khi lấy danh sách lịch làm việc: " + ex.Message);
+            }
+            finally
+            {
+                if (conn.State == ConnectionState.Open)
+                    conn.Close();
+            }
+            return lichLamViecs;
+
+        }
     }
 }

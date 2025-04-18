@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Second_Try.BLL;
 using Second_Try.Control;
 using Second_Try.DAL;
 using Second_Try.Entity;
@@ -126,7 +127,10 @@ namespace Second_Try.GUI.BacSi
 
             List<DatLich> danhsachDatLich = DatLichDAL.Instance.GetLichHenByBacSiID(IdTaiKhoan.idBacSiTaiKhoan, dtpNgaycheck.Value.Date, selectedTime);
 
-            var danhSachSapXep = danhsachDatLich.OrderBy(x => x.ThoiGian).ToList();
+            var danhSachSapXep = danhsachDatLich
+                .OrderByDescending(x => x.TrangThai)  // TrangThai = 1 (đã xác nhận) lên trước
+                .ThenBy(x => x.ThoiGian)              // rồi đến thời gian
+                .ToList();
 
             dataGridView1.DataSource = danhSachSapXep;
             dataGridView1.Columns["DatLichID"].HeaderText = "Lịch Hẹn ID";
@@ -135,6 +139,7 @@ namespace Second_Try.GUI.BacSi
             dataGridView1.Columns["NgayHen"].Visible = false;
             dataGridView1.Columns["GioDangKi"].HeaderText = "Giờ đăng kí";
             dataGridView1.Columns["BacSiID"].Visible = false;
+            dataGridView1.Columns["BacSiHoTen"].Visible = false;
             dataGridView1.Columns["TrangThaiString"].HeaderText = "Trạng thái";
             dataGridView1.Columns["KhanCapString"].HeaderText = "Khẩn cấp";
             dataGridView1.Columns["BacSiID"].Width = dataGridView1.Columns["DatLichID"].Width = dataGridView1.Columns["BenhNhanID"].Width = 40;
@@ -142,7 +147,7 @@ namespace Second_Try.GUI.BacSi
             dataGridView1.Columns["GhiChu"].Visible = false;
             dataGridView1.Columns["SDT"].Visible = false;
             dataGridView1.Columns["GioiTinh"].Visible = false;
-            dataGridView1.Columns["GioiTinhString"].Visible = false;
+            dataGridView1.Columns["GioiTinhString"].HeaderText = "Giới tính" ;
             dataGridView1.Columns["DiaChi"].Visible = false;
             dataGridView1.Columns["ThoiGian"].HeaderText = "Hẹn vào lúc";
             dataGridView1.Columns["ThoiGian"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm:ss";
@@ -172,12 +177,22 @@ namespace Second_Try.GUI.BacSi
         private void dataGridView1_RowPrePaint(object sender, DataGridViewRowPrePaintEventArgs e)
         {
             var dgv = sender as DataGridView;
-            if (dgv.Rows[e.RowIndex].Cells["KhanCap"].Value != null &&
-                dgv.Rows[e.RowIndex].Cells["KhanCap"].Value is bool isKhanCap &&
-                isKhanCap)
+            var row = dgv.Rows[e.RowIndex];
+            if (row.Cells["KhanCap"].Value is bool isKhanCap && isKhanCap)
             {
-                dgv.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Red;
-                dgv.Rows[e.RowIndex].DefaultCellStyle.ForeColor = Color.White; // Cho dễ nhìn
+                row.DefaultCellStyle.BackColor = Color.Red;
+                row.DefaultCellStyle.ForeColor = Color.White;
+            }
+            else if (row.Cells["TrangThai"].Value is bool isDaXacNhan && isDaXacNhan)
+            {
+                row.DefaultCellStyle.BackColor = Color.LightGreen; // Xanh lá nhạt cho dễ nhìn
+                row.DefaultCellStyle.ForeColor = Color.Black;
+            }
+            else
+            {
+                // Trạng thái mặc định nếu không khẩn cấp và chưa xác nhận
+                row.DefaultCellStyle.BackColor = Color.White;
+                row.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
 
@@ -238,9 +253,17 @@ namespace Second_Try.GUI.BacSi
                     lblKhancap.Visible = false;
                 }
                 txtDatLichid.Text = row.Cells["DatLichID"].Value.ToString();
+                if (DatLichBLL.Instance.DemSoLichDaXacNhan(row.Cells["BacSiID"].Value.ToString(), row.Cells["Ngayhen"].Value.ToString(), row.Cells["GioDangKi"].Value.ToString()) >= 1)
+                {
+                    DaDuocXacNhan = true;
+                }
+                else
+                {
+                    DaDuocXacNhan = false;
+                }
             }
         }
-
+        bool DaDuocXacNhan;
         private void siticoneShapes2_Click(object sender, EventArgs e)
         {
 
@@ -258,14 +281,35 @@ namespace Second_Try.GUI.BacSi
 
         private void siticoneButton1_Click(object sender, EventArgs e)
         {
-            if (DatLichDAL.Instance.XacNhanLichHen(Convert.ToInt32(txtDatLichid.Text))){
+            if (DaDuocXacNhan)
+            {
+                MessageBox.Show("Lịch hẹn đã được xác nhận, không thể xác nhận lại, vui lòng hủy lịch trước để d");
+                return;
+            }
+            if (DatLichDAL.Instance.XacNhanLichHenMini(Convert.ToInt32(txtDatLichid.Text)))
+            {
                 MessageBox.Show("Xác nhận lịch hẹn thành công");
                 LoadDanhSachLichDat();
+                panel2.Visible = false;
             }
             else
             {
                 MessageBox.Show("Xác nhận lịch hẹn thất bại");
             }
         }
+
+        private void btnDangKi_Click(object sender, EventArgs e)
+        {
+            if (DatLichDAL.Instance.HuyLichHen(Convert.ToInt32(txtDatLichid.Text)))
+            {
+                MessageBox.Show("Từ chối lịch hẹn thành công");
+                LoadDanhSachLichDat();
+                panel2.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Từ chối lịch hẹn thất bại");
+            }
+        }
     }
-} 
+}  

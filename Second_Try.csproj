@@ -285,23 +285,29 @@
     <Compile Include="GUI\BacSi\frmDanhSachLichDat.Designer.cs">
       <DependentUpon>frmDanhSachLichDat.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\BacSi\frmLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BacSi\frmLichLamViec.Designer.cs">
+      <DependentUpon>frmLichLamViec.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\BacSi\mainForm3.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BacSi\mainForm3.Designer.cs">
       <DependentUpon>mainForm3.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\BenhNhanfrm\frmDatLich.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\BenhNhanfrm\frmDatLich.Designer.cs">
-      <DependentUpon>frmDatLich.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\BenhNhanfrm\frmLichplus.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\BenhNhanfrm\frmLichplus.Designer.cs">
       <DependentUpon>frmLichplus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\BenhNhanfrm\LichHenplus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\BenhNhanfrm\LichHenplus.Designer.cs">
+      <DependentUpon>LichHenplus.cs</DependentUpon>
     </Compile>
     <Compile Include="QuanLyLichKhamDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -367,12 +373,6 @@
     </Compile>
     <Compile Include="GUI\BenhNhanfrm\ThongtinBenhnhanfrm.Designer.cs">
       <DependentUpon>ThongtinBenhnhanfrm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="GUI\BenhNhanfrm\lichfrm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\BenhNhanfrm\lichfrm.Designer.cs">
-      <DependentUpon>lichfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\BenhNhanfrm\frmBacsy.cs">
       <SubType>Form</SubType>
@@ -442,11 +442,11 @@
     <EmbeddedResource Include="GUI\BacSi\frmDanhSachLichDat.resx">
       <DependentUpon>frmDanhSachLichDat.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BacSi\frmLichLamViec.resx">
+      <DependentUpon>frmLichLamViec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\BacSi\mainForm3.resx">
       <DependentUpon>mainForm3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BenhNhanfrm\frmDatLich.resx">
-      <DependentUpon>frmDatLich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\BenhNhanfrm\frmLichHen.resx">
       <DependentUpon>frmLichHen.cs</DependentUpon>
@@ -457,14 +457,14 @@
     <EmbeddedResource Include="GUI\BenhNhanfrm\frmLichplus.resx">
       <DependentUpon>frmLichplus.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\BenhNhanfrm\LichHenplus.resx">
+      <DependentUpon>LichHenplus.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Chung\frmTK.resx">
       <DependentUpon>frmTK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Chung\Homefrm.resx">
       <DependentUpon>Homefrm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\BenhNhanfrm\lichfrm.resx">
-      <DependentUpon>lichfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Chung\loginForm.resx">
       <DependentUpon>loginForm.cs</DependentUpon>
@@ -794,9 +794,17 @@
   <ItemGroup>
     <None Include="Resources\icon chuye khoa.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\panel đạt lịch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon j do.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon them.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('packages\Microsoft.Data.SqlClient.SNI.6.0.2\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />

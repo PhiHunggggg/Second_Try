@@ -166,14 +166,14 @@
   <data name="icon trừ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon trừ.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="meow like" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\meow like.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dấu X1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dấu X1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="anh-dong-bieu-cam-cute_105544986" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anh-dong-bieu-cam-cute_105544986.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon chuye khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon chuye khoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Rectangle 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rectangle 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,11 +181,17 @@
   <data name="z6471628827280_eb0dc962dff3f7635a61063dba256a98-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z6471628827280_eb0dc962dff3f7635a61063dba256a98-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Ảnh hành tinh 2 promax" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ảnh hành tinh 2 promax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Dấu trừ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Dấu trừ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="HÌnh vuông" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\HÌnh vuông.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel đạt lịch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel đạt lịch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon bác sỹ" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon bác sỹ.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -199,29 +205,32 @@
   <data name="ta" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ta.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rectangle 7 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Rectangle 7 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon chuye khoa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon chuye khoa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="z6448953191376_2ab766ef811224896a819d6c5fa363f4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\z6448953191376_2ab766ef811224896a819d6c5fa363f4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hh" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon j do" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon j do.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="6af42dce-3498-44ae-aaaf-8661170f8d94 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6af42dce-3498-44ae-aaaf-8661170f8d94 (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="z6448956699458_1bc8fbf484c76d819e1c016d525b1d55" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\z6448956699458_1bc8fbf484c76d819e1c016d525b1d55.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="meow like" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\meow like.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="giang" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ảnh mũi tên quay lại" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ảnh mũi tên quay lại.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon maxi" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon maxi.ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pngtree-hospital-icon-design-illustration-png-image_2171135 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pngtree-hospital-icon-design-illustration-png-image_2171135 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ảnh hình tròn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ảnh hình tròn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="đăng ký" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\đăng ký.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,8 +244,8 @@
   <data name="Icon cuốn lịch" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon cuốn lịch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="a5add5637d04660498125a5842a8c0dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\a5add5637d04660498125a5842a8c0dd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hh" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hh.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Icon cuốn lịch1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon cuốn lịch1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -250,28 +259,28 @@
   <data name="ảnh hình tròn" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ảnh hình tròn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ảnh hình tròn1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ảnh hình tròn1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pngtree-hospital-icon-design-illustration-png-image_2171135 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pngtree-hospital-icon-design-illustration-png-image_2171135 (1).ico;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ảnh mũi tên quay lại" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ảnh mũi tên quay lại.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Rectangle 7 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rectangle 7 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ảnh mũi tên quay lại plus 2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ảnh mũi tên quay lại plus 2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="giang" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\giang.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="a5add5637d04660498125a5842a8c0dd" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\a5add5637d04660498125a5842a8c0dd.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vàng" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vàng.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Ảnh hành tinh 2 promax" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Ảnh hành tinh 2 promax.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="z6448956699458_1bc8fbf484c76d819e1c016d525b1d55" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\z6448956699458_1bc8fbf484c76d819e1c016d525b1d55.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="vàng-fotor-20250318211627" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vàng-fotor-20250318211627.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panel đạt lịch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panel đạt lịch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon them" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon them.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

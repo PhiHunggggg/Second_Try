@@ -28,12 +28,12 @@ namespace Second_Try.Control
         private LichHenDAL() { }
 
         #region ThemLichHen
-        public int ThemLichHen(int benhNhanID, int bacSiID, DateTime ngayHen, TimeSpan gioHen, string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
+        public int ThemLichHen(int benhNhanID, int bacSiID, DateTime ngayHen, TimeSpan gioHen, string ghiChu, string hotennguoikham, string sdt, bool gioiTinh, string diachi)
         {
             int lichHenID = -1;
             try
             {
-                string query = @"INSERT INTO LichHen (BenhNhanID, BacSiID, NgayHen, GioHen, TrangThai,GhiChu,HoTenNguoiKham,NgaySinh,SDT,GioiTinh,DiaChi) VALUES (@BenhNhanID, @BacSiID, @NgayHen, @GioHen, 0,@GhiChu,@HoTenNguoiKham,@NgaySinh,@SDT,@GioiTinh,@DiaChi);SELECT SCOPE_IDENTITY();";
+                string query = @"INSERT INTO LichHen (BenhNhanID, BacSiID, NgayHen, GioHen, TrangThai,GhiChu,HoTenNguoiKham,SDT,GioiTinh,DiaChi) VALUES (@BenhNhanID, @BacSiID, @NgayHen, @GioHen, 0,@GhiChu,@HoTenNguoiKham,@SDT,@GioiTinh,@DiaChi);SELECT SCOPE_IDENTITY();";
 
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -43,7 +43,6 @@ namespace Second_Try.Control
                     cmd.Parameters.AddWithValue("@GioHen", gioHen);
                     cmd.Parameters.AddWithValue("@GhiChu", ghiChu);
                     cmd.Parameters.AddWithValue("@HoTenNguoiKham", hotennguoikham);
-                    cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
                     cmd.Parameters.AddWithValue("@SDT", sdt);
                     cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
                     cmd.Parameters.AddWithValue("@DiaChi", diachi);
@@ -79,7 +78,7 @@ namespace Second_Try.Control
 
             try
             {
-                string query = @"SELECT LichHenID ,BacSiID, NgayHen, GioHen, GioDenThucTe, TrangThai,GhiChu,HoTenNguoiKham,NgaySinh,SDT,GioiTinh,DiaChi
+                string query = @"SELECT LichHenID ,BacSiID, NgayHen, GioHen, GioDenThucTe, TrangThai,GhiChu,HoTenNguoiKham,SDT,GioiTinh,DiaChi
                          FROM LichHen
                          WHERE BenhNhanID = @BenhNhanID";
 
@@ -105,10 +104,9 @@ namespace Second_Try.Control
                                 TrangThai = reader.GetBoolean(5), // Nếu kiểu bit thì dùng GetBoolean
                                 GhiChu = reader.GetString(6),
                                 HoTenNguoiKham = reader.GetString(7),
-                                NgaySinh = reader.GetDateTime(8),
-                                SDT = reader.GetString(9),
-                                GioiTinh = reader.GetBoolean(10),
-                                DiaChi = reader.GetString(11)
+                                SDT = reader.GetString(8),
+                                GioiTinh = reader.GetBoolean(9),
+                                DiaChi = reader.GetString(10)
                             };
                             danhSachLichHen.Add(lichHen);
                         }
@@ -130,13 +128,13 @@ namespace Second_Try.Control
         #endregion
         #region SuaLichHen
         public bool SuaLichHen(int lichHenID, DateTime ngayHen, TimeSpan gioHen,
-                         string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
+                         string ghiChu, string hotennguoikham, string sdt, bool gioiTinh, string diachi)
         {
             try
             {
                 string query = @"UPDATE LichHen 
                          SET HoTenNguoiKham = @HoTen, NgayHen = @NgayHen, GioHen = @GioHen, 
-                             GhiChu = @GhiChu, NgaySinh = @NgaySinh, 
+                             GhiChu = @GhiChu,
                              SDT = @SDT, GioiTinh = @GioiTinh, DiaChi = @DiaChi
                          WHERE LichHenID = @LichHenID";
 
@@ -147,7 +145,6 @@ namespace Second_Try.Control
                     cmd.Parameters.AddWithValue("@NgayHen", ngayHen);
                     cmd.Parameters.AddWithValue("@GioHen", gioHen);
                     cmd.Parameters.AddWithValue("@GhiChu", ghiChu);
-                    cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
                     cmd.Parameters.AddWithValue("@SDT", sdt);
                     cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
                     cmd.Parameters.AddWithValue("@DiaChi", diachi);
@@ -278,7 +275,7 @@ namespace Second_Try.Control
 
             try
             {
-                string query = @"SELECT LichHenID,BenhNhanID, BacSiID, NgayHen, GioHen,GioDenThucTe,TrangThai, GhiChu, HoTenNguoiKham ,NgaySinh,SDT,GioiTinh,DiaChi
+                string query = @"SELECT LichHenID,BenhNhanID, BacSiID, NgayHen, GioHen,GioDenThucTe,TrangThai, GhiChu, HoTenNguoiKham,SDT,GioiTinh,DiaChi
                          FROM LichHen";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -299,10 +296,9 @@ namespace Second_Try.Control
                                 TrangThai = reader.GetBoolean(6), // Nếu kiểu bit thì dùng GetBoolean
                                 GhiChu = reader.IsDBNull(7) ? "" : reader.GetString(7),
                                 HoTenNguoiKham = reader.GetString(8),
-                                NgaySinh = reader.GetDateTime(9),
-                                SDT = reader.GetString(10),
-                                GioiTinh = reader.GetBoolean(11),
-                                DiaChi = reader.GetString(12)
+                                SDT = reader.GetString(9),
+                                GioiTinh = reader.GetBoolean(10),
+                                DiaChi = reader.GetString(11)
                             };
                             danhSachLichHen.Add(lichHen);
                         }
@@ -322,12 +318,12 @@ namespace Second_Try.Control
         }
         #endregion
         #region SuaLichHen
-        public bool SuaLichHen2(int lichHenID,int bacssiID ,DateTime ngayHen, TimeSpan gioHen, TimeSpan? gioDenThucTe, bool trangThai, string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
+        public bool SuaLichHen2(int lichHenID,int bacssiID ,DateTime ngayHen, TimeSpan gioHen, TimeSpan? gioDenThucTe, bool trangThai, string ghiChu, string hotennguoikham, string sdt, bool gioiTinh, string diachi)
         {
             try
             {
                 string query = @"UPDATE LichHen 
-                         SET BacSiID=@BacSiID ,NgayHen = @NgayHen, GioHen = @GioHen, GioDenThucTe = @GioDenThucTe, TrangThai = @TrangThai, GhiChu = @GhiChu,HoTenNguoiKham = @HoTenNguoiKham, NgaySinh = @NgaySinh, SDT = @SDT, GioiTinh = @GioiTinh, DiaChi = @DiaChi
+                         SET BacSiID=@BacSiID ,NgayHen = @NgayHen, GioHen = @GioHen, GioDenThucTe = @GioDenThucTe, TrangThai = @TrangThai, GhiChu = @GhiChu,HoTenNguoiKham = @HoTenNguoiKham, SDT = @SDT, GioiTinh = @GioiTinh, DiaChi = @DiaChi
                          WHERE LichHenID = @LichHenID";
                 using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
@@ -339,7 +335,6 @@ namespace Second_Try.Control
                     cmd.Parameters.AddWithValue("@TrangThai", trangThai);
                     cmd.Parameters.AddWithValue("@GhiChu", ghiChu);
                     cmd.Parameters.AddWithValue("@HoTenNguoiKham", hotennguoikham);
-                    cmd.Parameters.AddWithValue("@NgaySinh", ngaySinh);
                     cmd.Parameters.AddWithValue("@SDT", sdt);
                     cmd.Parameters.AddWithValue("@GioiTinh", gioiTinh);
                     cmd.Parameters.AddWithValue("@DiaChi", diachi);

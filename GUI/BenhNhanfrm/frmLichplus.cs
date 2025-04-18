@@ -23,6 +23,7 @@ namespace Second_Try.GUI.BenhNhan
         private List<Button> timeButtons;
         private void frmLichplus_Load(object sender, EventArgs e)
         {
+            pnlDatLich.Visible = false;
             List<Second_Try.Entity.ChuyenKhoa> danhsachchuyenkhoa = ChuyenKhoaDAL.Instance.GetDanhSachChuyenKhoa();
             siticoneComboBox1.DataSource = danhsachchuyenkhoa;
             siticoneComboBox1.DisplayMember = "TenChuyenKhoa";
@@ -119,8 +120,17 @@ namespace Second_Try.GUI.BenhNhan
                 }
             }
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private bool CheckTrungNgay(int benhNhanID, DateTime ngay)
+        {
+            if(DatLichDAL.Instance.CheckDaDatLich(benhNhanID, ngay))
+            {
+                MessageBox.Show("Bạn đã có lịch hẹn vào ngày này rồi");
+                pnlBtn.Visible = false;
+                return true;
+            }
+            return false;
+        }
+            private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
@@ -210,6 +220,11 @@ namespace Second_Try.GUI.BenhNhan
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             check = 1;
+            if(CheckTrungNgay(IdTaiKhoan.idBenhNhanTaiKhoan, dateTimePicker1.Value.Date))
+            {
+                return;
+            }
+            pnlBtn.Visible = true;
             DateTime ngay = dateTimePicker1.Value.Date;
             int bacSiID = Convert.ToInt32(siticoneComboBox2.SelectedValue);
             txtNgay.Text = ngay.ToString("yyyy-MM-dd");

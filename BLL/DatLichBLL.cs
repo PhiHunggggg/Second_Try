@@ -42,5 +42,13 @@ namespace Second_Try.BLL
                 return DAL.DatLichDAL.Instance.ThemDatLich(bacSiIDInt, benhNhanID, hoTen, gioiTinh, sdt, diaChi, ghiChu, ngayHenDatetime, gioDangkiTimespan);
             }
         }
+        public int DemSoLichDaXacNhan(string  bacSiID,string ngayHen,string giohen)
+        {
+            // Chuyển đổi các tham số từ string sang kiểu dữ liệu tương ứng
+            int bacSiIDInt = int.Parse(bacSiID);
+            DateTime ngayHenDatetime = ngayHen == "" ? DateTime.Now : DateTime.Parse(ngayHen);
+            TimeSpan giohenTimespan = TimeSpan.Parse(giohen);
+            return DAL.DatLichDAL.Instance.DemSoLichDaXacNhan(bacSiIDInt, ngayHenDatetime, giohenTimespan);
+        }
     }
 }

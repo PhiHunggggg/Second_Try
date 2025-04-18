@@ -67,7 +67,6 @@ namespace Second_Try.View
                 dateTimePicker1.Value = DateTime.Today.Add(gioHen);
                 lblTenbacsi.Text = row.Cells["BacSiHoTen"].Value.ToString();
 
-                dateNgaysinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 TimeSpan startTime = new TimeSpan(7, 0, 0);  // 07:00:00
                 TimeSpan endTime = new TimeSpan(12, 0, 0);   // 12:00:00
 
@@ -137,7 +136,6 @@ namespace Second_Try.View
             dataGridView1.Columns["TrangThai"].Visible = false;
             dataGridView1.Columns["GhiChu"].HeaderText = "Ghi chú";
             dataGridView1.Columns["HoTenNguoiKham"].HeaderText = "Người đăng ký";
-            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngày sinh";
             dataGridView1.Columns["SDT"].HeaderText = "Số điện thoại";
             dataGridView1.Columns["GioiTinh"].Visible = false;
             dataGridView1.Columns["DiaChi"].HeaderText = "Địa chỉ";
@@ -191,7 +189,6 @@ namespace Second_Try.View
             DateTime ngayHen = dateTimePicker2.Value;
             string ghiChu = txtghichu.Text;
             string hoTenNguoiKham = txtTenBenhNhan.Text;
-            DateTime ngaySinh = dateNgaysinh.Value;
             string sdt = txtSdt.Text;
             bool gioiTinh = Nam.Checked; // Nam = true, Nữ = false
             string diaChi = txtDiachi.Text;
@@ -227,7 +224,7 @@ namespace Second_Try.View
             }
 
             bool ketQua = LichHenDAL.Instance.SuaLichHen(lichHenID, ngayHen, gioHen,
-                                               ghiChu, hoTenNguoiKham, ngaySinh, sdt, gioiTinh, diaChi);
+                                               ghiChu, hoTenNguoiKham, sdt, gioiTinh, diaChi);
 
 
             // Kiểm tra trạng thái lịch làm việc

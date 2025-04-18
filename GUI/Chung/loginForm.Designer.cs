@@ -79,7 +79,7 @@
             this.txtTai_khoan.ForeColor = System.Drawing.Color.DarkGray;
             this.txtTai_khoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTai_khoan.Location = new System.Drawing.Point(86, 235);
-            this.txtTai_khoan.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTai_khoan.Margin = new System.Windows.Forms.Padding(2);
             this.txtTai_khoan.Name = "txtTai_khoan";
             this.txtTai_khoan.PasswordChar = '\0';
             this.txtTai_khoan.PlaceholderText = "";
@@ -105,7 +105,7 @@
             this.txtMat_khau.ForeColor = System.Drawing.Color.DarkGray;
             this.txtMat_khau.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMat_khau.Location = new System.Drawing.Point(86, 290);
-            this.txtMat_khau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMat_khau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMat_khau.Name = "txtMat_khau";
             this.txtMat_khau.PasswordChar = '\0';
             this.txtMat_khau.PlaceholderText = "";
@@ -128,7 +128,7 @@
             this.btnLogin.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
             this.btnLogin.Location = new System.Drawing.Point(86, 345);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 37);
             this.btnLogin.TabIndex = 4;
@@ -147,7 +147,7 @@
             this.btnsign.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsign.ForeColor = System.Drawing.Color.White;
             this.btnsign.Location = new System.Drawing.Point(222, 345);
-            this.btnsign.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnsign.Margin = new System.Windows.Forms.Padding(2);
             this.btnsign.Name = "btnsign";
             this.btnsign.Size = new System.Drawing.Size(100, 37);
             this.btnsign.TabIndex = 5;
@@ -168,7 +168,7 @@
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(437, 562);
             this.panel1.TabIndex = 0;
@@ -179,7 +179,7 @@
             this.btnmini.BackColor = System.Drawing.Color.White;
             this.btnmini.Image = global::Second_Try.Properties.Resources.icon_trừ;
             this.btnmini.Location = new System.Drawing.Point(25, 0);
-            this.btnmini.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnmini.Margin = new System.Windows.Forms.Padding(2);
             this.btnmini.Name = "btnmini";
             this.btnmini.Size = new System.Drawing.Size(25, 27);
             this.btnmini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -195,7 +195,7 @@
             this.btnX.BackColor = System.Drawing.Color.White;
             this.btnX.Image = global::Second_Try.Properties.Resources.window_close_line_icon_235523;
             this.btnX.Location = new System.Drawing.Point(0, 0);
-            this.btnX.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX.Margin = new System.Windows.Forms.Padding(2);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(25, 27);
             this.btnX.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -210,7 +210,7 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.BackColor = System.Drawing.SystemColors.Window;
             this.checkBox1.Location = new System.Drawing.Point(38, 492);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(75, 17);
             this.checkBox1.TabIndex = 7;
@@ -222,7 +222,7 @@
             // 
             this.pictureBox5.Image = global::Second_Try.Properties.Resources.Ảnh_hành_tinh_2_plus;
             this.pictureBox5.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(436, 562);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -234,7 +234,7 @@
             // 
             this.pictureBox3.Image = global::Second_Try.Properties.Resources.Ảnh_hành_tinh_2;
             this.pictureBox3.Location = new System.Drawing.Point(2, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(434, 560);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -245,7 +245,7 @@
             // 
             this.pictureBox2.Image = global::Second_Try.Properties.Resources.Ảnh_hành_tinh;
             this.pictureBox2.Location = new System.Drawing.Point(433, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(529, 562);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,7 +257,7 @@
             // 
             this.pictureBox1.Image = global::Second_Try.Properties.Resources.Ảnh_hành_tinh_plus;
             this.pictureBox1.Location = new System.Drawing.Point(433, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(529, 560);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +277,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "loginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

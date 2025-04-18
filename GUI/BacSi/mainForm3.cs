@@ -81,7 +81,7 @@ namespace Second_Try
         private void btnBacsy_Click(object sender, EventArgs e)
         {
             lblHaa.Text = "JT APP";
-            OpenChildForm(new frmBacsy());
+            OpenChildForm(new frmLichLamViec());
         }
 
         private void btnBacsy_MouseLeave(object sender, EventArgs e)

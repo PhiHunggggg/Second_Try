@@ -9,7 +9,7 @@ namespace Second_Try.Entity
     internal class LichHen
     {
         public LichHen() { }
-        public LichHen(int lichhenid, int benhnhanid, int bacsiid, DateTime ngayhen, TimeSpan giohen,TimeSpan? giodenthucte, bool trangthai, string ghiChu, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi)
+        public LichHen(int lichhenid, int benhnhanid, int bacsiid, DateTime ngayhen, TimeSpan giohen,TimeSpan? giodenthucte, bool trangthai, string ghiChu, string hotennguoikham, string sdt, bool gioiTinh, string diachi)
         {
             this.LichHenID = lichhenid;
             this.BenhNhanID = benhnhanid;
@@ -20,7 +20,6 @@ namespace Second_Try.Entity
             this.TrangThai = trangthai;
             this.GhiChu = ghiChu;
             this.HoTenNguoiKham = hotennguoikham;
-            this.NgaySinh = ngaySinh;
             this.SDT = sdt;
             this.GioiTinh = gioiTinh;
             this.DiaChi = diachi;
@@ -33,8 +32,6 @@ namespace Second_Try.Entity
         {
             get { return GioiTinh ? "Nam" : "Nữ"; }
         }
-        private DateTime ngaysinh;
-        public DateTime NgaySinh { get => ngaysinh; set => ngaysinh = value; }
         private string Sdt;
         public string SDT { get => Sdt; set => Sdt = value; }
         private bool gioitinh;

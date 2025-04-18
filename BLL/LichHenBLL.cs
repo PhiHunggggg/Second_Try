@@ -24,7 +24,7 @@ namespace Second_Try.BLL
             private set => instance = value;
         }
         private LichHenBLL() { }
-        public bool SuaLichHen(string lichHenID, string bacSiID, DateTime ngayHen, TimeSpan gioHen, TimeSpan? gioDenThucTe, bool trangThai, string ghiChu,string diaChi, string hotennguoikham, DateTime ngaySinh, string sdt, bool gioiTinh, string diachi,bool ca)
+        public bool SuaLichHen(string lichHenID, string bacSiID, DateTime ngayHen, TimeSpan gioHen, TimeSpan? gioDenThucTe, bool trangThai, string ghiChu,string diaChi, string hotennguoikham, string sdt, bool gioiTinh, string diachi,bool ca)
         {
             if (bacSiID == "")
             {
@@ -72,7 +72,7 @@ namespace Second_Try.BLL
                     MessageBox.Show("Ngày hẹn không hợp lệ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     return false;
                 }*/
-                LichHenDAL.Instance.SuaLichHen2(lichHenIDint,bacSiIDint, ngayHen, gioHen, gioDenThucTe,trangThai,ghiChu,hotennguoikham,ngaySinh,sdt,gioiTinh,diaChi);
+                LichHenDAL.Instance.SuaLichHen2(lichHenIDint,bacSiIDint, ngayHen, gioHen, gioDenThucTe,trangThai,ghiChu,hotennguoikham,sdt,gioiTinh,diaChi);
                 return true;
             }
         }

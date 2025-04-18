@@ -72,8 +72,6 @@ namespace Second_Try.GUI.Admin
             dataGridView1.Columns["GhiChu"].Width = 80;
             dataGridView1.Columns["HoTenNguoiKham"].HeaderText = "Người đăng ký";
             dataGridView1.Columns["HoTenNguoiKham"].Width = 100;
-            dataGridView1.Columns["NgaySinh"].HeaderText = "Ngày sinh";
-            dataGridView1.Columns["NgaySinh"].Width = 80;
             dataGridView1.Columns["SDT"].HeaderText = "Số điện thoại";
             dataGridView1.Columns["SDT"].Width = 80;
             dataGridView1.Columns["GioiTinh"].Visible = false;
@@ -148,7 +146,6 @@ namespace Second_Try.GUI.Admin
                 {
                     dtpGiothucte.Value = DateTime.Today;
                 }
-                dateNgaysinh.Value = Convert.ToDateTime(row.Cells["NgaySinh"].Value);
                 TimeSpan startTime = new TimeSpan(7, 0, 0);  // 07:00:00
                 TimeSpan endTime = new TimeSpan(12, 0, 0);   // 12:00:00
 
@@ -176,7 +173,6 @@ namespace Second_Try.GUI.Admin
             DateTime ngayHen = dtpngayhen.Value;
             string ghiChu = txtghichu.Text;
             string hoTenNguoiKham = txtTenBenhNhan.Text;
-            DateTime ngaySinh = dateNgaysinh.Value;
             string sdt = txtSdt.Text;
             bool gioiTinh = Nam.Checked; // Nam = true, Nữ = false
             string diaChi = txtDiachi.Text;
@@ -239,7 +235,7 @@ namespace Second_Try.GUI.Admin
                 checkBox1.Checked = true;
             }
             bool trangThai = checkBox1.Checked; // Đã khám = true, Chưa khám = false\
-            bool ketQua = LichHenBLL.Instance.SuaLichHen(txtLichhenid.Text, comboBox1.SelectedValue.ToString(), ngayHen, gioHen, gioDen, trangThai, ghiChu, diaChi, hoTenNguoiKham, ngaySinh, sdt, gioiTinh, diaChi, caLamViec);
+            bool ketQua = LichHenBLL.Instance.SuaLichHen(txtLichhenid.Text, comboBox1.SelectedValue.ToString(), ngayHen, gioHen, gioDen, trangThai, ghiChu, diaChi, hoTenNguoiKham, sdt, gioiTinh, diaChi, caLamViec);
 
 
             // Kiểm tra trạng thái lịch làm việc
